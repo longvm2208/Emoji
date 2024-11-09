@@ -1,0 +1,101 @@
+{
+"skeleton": {
+	"hash": "XefFJiSryIE",
+	"spine": "4.0.64",
+	"x": -135.32,
+	"y": -142.2,
+	"width": 269,
+	"height": 327,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "EmojiLv01", "parent": "root", "color": "28b80bff" },
+	{ "name": "Tear2", "parent": "EmojiLv01", "rotation": -91.56, "y": 178.24, "color": "28b80bff" },
+	{
+		"name": "Tear1",
+		"parent": "Tear2",
+		"length": 47.9,
+		"rotation": 1.18,
+		"x": 9.17,
+		"y": 0.01,
+		"color": "28b80bff"
+	},
+	{
+		"name": "Tonged1",
+		"parent": "Tear2",
+		"length": 52.55,
+		"rotation": 0.85,
+		"x": 133.18,
+		"y": 2.47,
+		"color": "28b80bff"
+	}
+],
+"slots": [
+	{ "name": "Tear2", "bone": "Tear2", "attachment": "Step03/Tear" },
+	{ "name": "Tonged1", "bone": "Tonged1", "attachment": "Step03/Tonged" },
+	{ "name": "Tear1", "bone": "Tear1", "attachment": "Step00/Tear" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Tear1": {
+				"Step00/Tear": { "x": 147.78, "y": 0.4, "rotation": 90.38, "width": 269, "height": 327 }
+			},
+			"Tear2": {
+				"Step03/Tear": { "x": 140.91, "y": 3.01, "rotation": 91.56, "width": 185, "height": 291 }
+			},
+			"Tonged1": {
+				"Step03/Tonged": { "x": 31.23, "y": 0.72, "rotation": 90.71, "width": 55, "height": 66 }
+			}
+		}
+	}
+],
+"animations": {
+	"3": {
+		"slots": {
+			"Tear1": {
+				"rgba": [
+					{ "time": 0.4, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Tear1": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "value": 9.06 },
+					{ "time": 0.4, "value": 10.32 },
+					{ "time": 0.6667, "value": 11.47 }
+				],
+				"translatex": [
+					{},
+					{ "time": 0.1667, "value": 112.73 },
+					{ "time": 0.4, "value": 244.58 },
+					{ "time": 0.6667, "value": 318.06 }
+				],
+				"translatey": [
+					{},
+					{ "time": 0.1667, "value": 2.17 },
+					{ "time": 0.4, "value": 14.57 },
+					{ "time": 0.6667, "value": 16.57 }
+				]
+			},
+			"Tonged1": {
+				"rotate": [
+					{ "time": 0.1333 },
+					{ "time": 0.2333, "value": 15.82 },
+					{ "time": 0.3333, "value": -18.67 },
+					{ "time": 0.4333, "value": 12.16 },
+					{ "time": 0.5333, "value": -7.58 },
+					{ "time": 0.6333, "value": 4.59 },
+					{ "time": 0.7333 }
+				]
+			}
+		}
+	}
+}
+}

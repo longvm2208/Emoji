@@ -1,0 +1,14 @@
+Emoji.png
+size:1015,819
+filter:Linear,Linear
+pma:true
+Lv03/Step00/Body
+bounds:2,2,816,815
+offsets:1,1,818,817
+Lv03/Step01/Sunglasses
+bounds:820,2,643,193
+offsets:1,1,645,195
+rotate:90
+Lv03/Step05/Eyes
+bounds:820,647,156,141
+offsets:1,1,158,143

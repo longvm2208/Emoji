@@ -1,0 +1,13 @@
+Emoji.png
+size:479,305
+filter:Linear,Linear
+pma:true
+Step00/Tear
+bounds:2,2,235,301
+offsets:18,18,269,327
+Step03/Tear
+bounds:239,14,183,289
+offsets:1,1,185,291
+Step03/Tonged
+bounds:424,239,53,64
+offsets:1,1,55,66

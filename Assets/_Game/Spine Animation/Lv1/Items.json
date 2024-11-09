@@ -1,0 +1,182 @@
+{
+"skeleton": { "hash": "UhkyeRhX7oQ", "spine": "4.0.64", "images": "./images/", "audio": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "04_1", "parent": "root", "x": -65.12, "y": -231.76 },
+	{ "name": "04_3", "parent": "04_1", "length": 344.19, "rotation": -103.15, "x": 61.79, "y": 385.21 },
+	{ "name": "04_4", "parent": "04_1", "length": 356.48, "rotation": -117.95, "x": 185.95, "y": 359.97 },
+	{ "name": "02", "parent": "root", "rotation": 0.14 },
+	{ "name": "03", "parent": "root", "length": 325.54, "rotation": -133.29 },
+	{ "name": "01", "parent": "root", "rotation": 0.14 }
+],
+"slots": [
+	{ "name": "01", "bone": "01" },
+	{ "name": "02", "bone": "02" },
+	{ "name": "03", "bone": "03" },
+	{ "name": "04_1", "bone": "04_4" },
+	{ "name": "04_2", "bone": "04_3" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"01": {
+				"BigItems/01": { "width": 363, "height": 373 }
+			},
+			"02": {
+				"BigItems/02": { "x": -1.44, "y": -19.57, "width": 372, "height": 293 }
+			},
+			"03": {
+				"BigItems/03": { "x": 43.68, "y": 2.28, "rotation": 133.43, "width": 414, "height": 410 }
+			},
+			"04_1": {
+				"BigItems/04_1": { "x": 174.06, "y": 0.17, "rotation": 118.09, "width": 198, "height": 340 }
+			},
+			"04_2": {
+				"BigItems/04_2": { "x": 167.46, "y": 3.98, "rotation": 103.29, "width": 112, "height": 370 }
+			}
+		}
+	}
+],
+"events": {
+	"3": {}
+},
+"animations": {
+	"1": {
+		"slots": {
+			"01": {
+				"attachment": [
+					{ "name": "BigItems/01" }
+				]
+			}
+		},
+		"bones": {
+			"01": {
+				"rotate": [
+					{
+						"curve": [ 0.111, 0, 0.222, -195 ]
+					},
+					{ "time": 0.3333, "value": -195 }
+				]
+			}
+		}
+	},
+	"2": {
+		"slots": {
+			"02": {
+				"attachment": [
+					{ "name": "BigItems/02" }
+				]
+			}
+		},
+		"bones": {
+			"02": {
+				"translatex": [
+					{
+						"value": -51.95,
+						"curve": [ 0.056, -51.95, 0.278, 51.95 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 51.95,
+						"curve": [ 0.389, 51.95, 0.611, -51.95 ]
+					},
+					{ "time": 0.6667, "value": -51.95 }
+				],
+				"translatey": [
+					{
+						"curve": [ 0.038, 15.22, 0.111, 51.45 ]
+					},
+					{
+						"time": 0.1667,
+						"value": 51.45,
+						"curve": [ 0.222, 51.45, 0.287, 38.06 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 19.88,
+						"curve": [ 0.382, 1.07, 0.444, -39.73 ]
+					},
+					{
+						"time": 0.5,
+						"value": -39.73,
+						"curve": [ 0.556, -39.73, 0.628, -12.45 ]
+					},
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"3": {
+		"slots": {
+			"03": {
+				"attachment": [
+					{ "name": "BigItems/03" }
+				]
+			}
+		},
+		"bones": {
+			"03": {
+				"rotate": [
+					{},
+					{ "time": 0.1, "value": -87 },
+					{ "time": 0.2, "value": -147.2 },
+					{ "time": 0.3667, "value": -160.08 },
+					{ "time": 0.4, "value": -75.57 },
+					{ "time": 0.4333, "value": 37.53 },
+					{ "time": 0.5333, "value": 63.35 },
+					{ "time": 0.6333, "value": 69.2 },
+					{ "time": 0.7667 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.1, "y": 49.37 },
+					{ "time": 0.2, "x": 15.03, "y": 60.1 },
+					{ "time": 0.3667, "x": 19.32, "y": 66.54 },
+					{ "time": 0.4333, "x": 66.54, "y": -103.03 },
+					{ "time": 0.5333, "x": 163.13, "y": -148.1 },
+					{ "time": 0.6333, "x": 107.32, "y": -148.1 },
+					{ "time": 0.7667 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.4, "name": "3" }
+		]
+	},
+	"4": {
+		"slots": {
+			"04_1": {
+				"attachment": [
+					{ "name": "BigItems/04_1" }
+				]
+			},
+			"04_2": {
+				"attachment": [
+					{ "name": "BigItems/04_2" }
+				]
+			}
+		},
+		"bones": {
+			"04_4": {
+				"rotate": [
+					{},
+					{ "time": 0.1, "value": 27.43 },
+					{ "time": 0.2333, "value": 30.84 },
+					{ "time": 0.3, "value": -1.9 },
+					{ "time": 0.3667, "value": -0.53 }
+				]
+			},
+			"04_3": {
+				"rotate": [
+					{},
+					{ "time": 0.1, "value": -26.9 },
+					{ "time": 0.2333, "value": -28.39 },
+					{ "time": 0.3, "value": 2.23 },
+					{ "time": 0.3667, "value": 1.38 }
+				]
+			}
+		}
+	}
+}
+}

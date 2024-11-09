@@ -1,0 +1,150 @@
+{
+"skeleton": {
+	"hash": "IYXDsnOZhJw",
+	"spine": "4.0.64",
+	"x": -479.15,
+	"y": -396.17,
+	"width": 981,
+	"height": 1138,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Emoji", "parent": "root" },
+	{ "name": "Circle", "parent": "Emoji", "x": 2.01, "y": 599.74 },
+	{ "name": "Assets1", "parent": "Emoji", "length": 157.84, "rotation": -90, "x": 358.62, "y": 420.33 }
+],
+"slots": [
+	{ "name": "Body", "bone": "Emoji", "attachment": "Lv02/Step05/Body" },
+	{ "name": "HornL", "bone": "Emoji", "attachment": "Lv02/Step05/HornL" },
+	{ "name": "HornR", "bone": "Emoji", "attachment": "Lv02/Step05/HornR" },
+	{ "name": "EyesR", "bone": "Emoji", "attachment": "Lv02/Step05/EyesR" },
+	{ "name": "EyesL", "bone": "Emoji", "attachment": "Lv02/Step05/EyesL" },
+	{ "name": "Lip", "bone": "Emoji", "attachment": "Lv02/Step05/Lip" },
+	{ "name": "Assets1", "bone": "Assets1", "attachment": "Lv02/Step05/Assets1" },
+	{ "name": "Circle", "bone": "Circle", "attachment": "Lv02/Step05/Circle" },
+	{ "name": "Scar", "bone": "Emoji", "attachment": "Lv02/Step05/Scar" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Assets1": {
+				"Lv02/Step05/Assets1": { "x": 143, "y": -0.27, "rotation": 90, "width": 133, "height": 347 }
+			},
+			"Body": {
+				"Lv02/Step05/Body": { "x": 9.85, "y": 14.33, "width": 820, "height": 821 }
+			},
+			"Circle": {
+				"Lv02/Step05/Circle": { "x": 9.35, "y": 4.09, "width": 981, "height": 276 }
+			},
+			"EyesL": {
+				"Lv02/Step05/EyesL": { "x": 174.35, "y": 30.33, "width": 269, "height": 133 }
+			},
+			"EyesR": {
+				"Lv02/Step05/EyesR": { "x": -195.65, "y": 34.33, "width": 269, "height": 133 }
+			},
+			"HornL": {
+				"Lv02/Step05/HornL": { "x": 237.35, "y": 357.33, "width": 275, "height": 263 }
+			},
+			"HornR": {
+				"Lv02/Step05/HornR": { "x": -251.65, "y": 359.33, "width": 275, "height": 263 }
+			},
+			"Lip": {
+				"Lv02/Step05/Lip": { "x": -3.65, "y": -164.67, "width": 199, "height": 109 }
+			},
+			"Scar": {
+				"Lv02/Step05/Scar": { "x": -2.15, "y": 109.33, "width": 30, "height": 151 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Emoji": {
+				"translate": [
+					{
+						"curve": [ 0.278, 0, 0.556, 0, 0.278, 0, 0.556, 54.86 ]
+					},
+					{
+						"time": 0.8333,
+						"y": 54.86,
+						"curve": [ 1.111, 0, 1.389, 0, 1.111, 54.86, 1.389, 0 ]
+					},
+					{ "time": 1.6667 }
+				],
+				"scale": [
+					{
+						"x": 1.028,
+						"y": 0.976,
+						"curve": [ 0.069, 1.033, 0.134, 1.037, 0.069, 0.968, 0.134, 0.963 ]
+					},
+					{
+						"time": 0.2,
+						"x": 1.037,
+						"y": 0.963,
+						"curve": [ 0.478, 1.037, 0.756, 0.975, 0.478, 0.963, 0.756, 1.05 ]
+					},
+					{
+						"time": 1.0333,
+						"x": 0.975,
+						"y": 1.05,
+						"curve": [ 1.245, 0.975, 1.457, 1.011, 1.245, 1.05, 1.457, 1 ]
+					},
+					{ "time": 1.6667, "x": 1.028, "y": 0.976 }
+				]
+			},
+			"Circle": {
+				"translate": [
+					{
+						"y": -57.19,
+						"curve": [ 0.091, 0, 0.179, 0, 0.091, -65.99, 0.179, -72.82 ]
+					},
+					{
+						"time": 0.2667,
+						"y": -72.82,
+						"curve": [ 0.544, 0, 0.822, 0, 0.544, -72.82, 0.822, -8.57 ]
+					},
+					{
+						"time": 1.1,
+						"y": -8.57,
+						"curve": [ 1.29, 0, 1.48, 0, 1.29, -8.57, 1.48, -38.19 ]
+					},
+					{ "time": 1.6667, "y": -57.19 }
+				]
+			},
+			"Assets1": {
+				"rotate": [
+					{
+						"value": -1.03,
+						"curve": [ 0.067, 0.62, 0.134, 2.44 ]
+					},
+					{
+						"time": 0.2,
+						"value": 2.44,
+						"curve": [ 0.356, 2.44, 0.511, -3.68 ]
+					},
+					{
+						"time": 0.6667,
+						"value": -3.68,
+						"curve": [ 0.789, -3.68, 0.911, 2.44 ]
+					},
+					{
+						"time": 1.0333,
+						"value": 2.44,
+						"curve": [ 1.189, 2.44, 1.344, -3.68 ]
+					},
+					{
+						"time": 1.5,
+						"value": -3.68,
+						"curve": [ 1.556, -3.68, 1.612, -2.42 ]
+					},
+					{ "time": 1.6667, "value": -1.03 }
+				]
+			}
+		}
+	}
+}
+}

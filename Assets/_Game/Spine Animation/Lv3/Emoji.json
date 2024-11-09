@@ -1,0 +1,128 @@
+{
+"skeleton": {
+	"hash": "PJ1PsDwoDek",
+	"spine": "4.0.64",
+	"x": -391,
+	"y": -506,
+	"width": 818,
+	"height": 817,
+	"images": "../../PSD/Level/images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Body", "parent": "root", "length": 149.18, "rotation": 89.49, "x": 12.6, "y": -500.43 },
+	{ "name": "Sunglasses", "parent": "Body", "length": 63.11, "rotation": 177.21, "x": 510.05, "y": 2.91 },
+	{
+		"name": "Eyes",
+		"parent": "Body",
+		"length": 298.75,
+		"rotation": -88.96,
+		"x": 471.42,
+		"y": 156.75,
+		"transform": "noScale"
+	}
+],
+"slots": [
+	{ "name": "Body", "bone": "Body", "attachment": "Lv03/Step00/Body" },
+	{ "name": "Eyes", "bone": "Eyes", "attachment": "Lv03/Step05/Eyes" },
+	{ "name": "Eyes2", "bone": "Eyes", "attachment": "Lv03/Step05/Eyes" },
+	{ "name": "Sunglasses", "bone": "Sunglasses", "attachment": "Lv03/Step01/Sunglasses" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Body": {
+				"Lv03/Step00/Body": { "x": 402.96, "y": -1.81, "rotation": -89.49, "width": 818, "height": 817 }
+			},
+			"Eyes": {
+				"Lv03/Step05/Eyes": { "x": -14.92, "y": 15.55, "rotation": -0.53, "width": 158, "height": 143 }
+			},
+			"Eyes2": {
+				"Lv03/Step05/Eyes": { "x": 307.34, "y": 12.59, "rotation": -0.53, "width": 158, "height": 143 }
+			},
+			"Sunglasses": {
+				"Lv03/Step01/Sunglasses": { "x": 47.4, "y": 7, "rotation": 93.3, "width": 645, "height": 195 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Body": {
+				"translate": [
+					{},
+					{ "time": 0.8333, "y": -19.39 },
+					{ "time": 1.6667 }
+				],
+				"scale": [
+					{
+						"curve": [ 0.071, 1.016, 0.222, 1.028, 0.036, 0.992, 0.222, 0.975 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 1.028,
+						"y": 0.975,
+						"curve": [ 0.5, 1.028, 0.667, 0.989, 0.5, 0.975, 0.68, 1.056 ]
+					},
+					{
+						"time": 0.8333,
+						"x": 0.964,
+						"y": 1.061,
+						"curve": [ 0.944, 0.947, 1.056, 0.94, 0.951, 1.064, 1.056, 1.065 ]
+					},
+					{
+						"time": 1.1667,
+						"x": 0.94,
+						"y": 1.065,
+						"curve": [ 1.333, 0.94, 1.5, 0.963, 1.333, 1.065, 1.5, 1.037 ]
+					},
+					{
+						"time": 1.6667,
+						"curve": [ 1.737, 1.016, 1.889, 1.028, 1.703, 0.992, 1.889, 0.975 ]
+					},
+					{
+						"time": 2,
+						"x": 1.028,
+						"y": 0.975,
+						"curve": [ 2.167, 1.028, 2.333, 0.989, 2.167, 0.975, 2.346, 1.056 ]
+					},
+					{
+						"time": 2.5,
+						"x": 0.964,
+						"y": 1.061,
+						"curve": [ 2.611, 0.947, 2.722, 0.94, 2.618, 1.064, 2.722, 1.065 ]
+					},
+					{
+						"time": 2.8333,
+						"x": 0.94,
+						"y": 1.065,
+						"curve": [ 3, 0.94, 3.267, 0.987, 3, 1.065, 3.245, 1.014 ]
+					},
+					{ "time": 3.3333 }
+				]
+			},
+			"Sunglasses": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": -157.25, "y": 49.03 },
+					{ "time": 0.4, "x": -162.63, "y": 50.85, "curve": "stepped" },
+					{ "time": 1.3333, "x": -162.63, "y": 50.85 },
+					{ "time": 1.5, "x": 8.77, "y": 0.07 },
+					{ "time": 1.6 }
+				]
+			},
+			"Eyes": {
+				"scale": [
+					{ "time": 0.3 },
+					{ "time": 0.3333, "y": 0.101, "curve": "stepped" },
+					{ "time": 0.4333, "y": 0.101 },
+					{ "time": 0.5 }
+				]
+			}
+		}
+	}
+}
+}
