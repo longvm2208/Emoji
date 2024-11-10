@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class ScreenshotToSprite : SingletonMonoBehaviour<ScreenshotToSprite>
 {
     [SerializeField] GameObject flashGo;
-    [SerializeField] UnityEvent onComplete;
     [SerializeField] UnityEvent[] onCompletes;
 
     int index;

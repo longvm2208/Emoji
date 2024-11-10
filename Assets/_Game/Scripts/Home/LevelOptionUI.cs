@@ -7,6 +7,7 @@ public class LevelOptionUI : MonoBehaviour
 {
     [SerializeField] Button button;
     [SerializeField] RectTransform myRt;
+    public RectTransform MyRt => myRt;
     [SerializeField] Image bgImage;
     [SerializeField] TMP_Text indexText;
     [SerializeField] Sprite[] bgSprites;

@@ -13,7 +13,14 @@ public class FadeSpriteRenderers : MonoBehaviour
     {
         for (int i = 0; i < srs.Length; i++)
         {
-            srs[i].DoFade(srs[i].color.a, alpha, duration).OnComplete(() => onComplete?.Invoke());
+            if (i < srs.Length - 1)
+            {
+                srs[i].DoFade(srs[i].color.a, alpha, duration);
+            }
+            else
+            {
+                srs[i].DoFade(srs[i].color.a, alpha, duration).OnComplete(() => onComplete?.Invoke());
+            }
         }
     }
 }
