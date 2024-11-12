@@ -9,6 +9,7 @@ public class SetAnimation : MonoBehaviour
     [SerializeField] int trackIndex;
     [SerializeField, SpineAnimation(dataField = "sa")] string anim;
     [SerializeField] bool loop;
+    [SerializeField] float timeScale = 1;
     [SerializeField] UnityEvent onComplete;
 
     void OnValidate()
@@ -18,7 +19,7 @@ public class SetAnimation : MonoBehaviour
 
     public void Set()
     {
-        sa.AnimationState.SetAnimation(trackIndex, anim, loop);
+        sa.AnimationState.SetAnimation(trackIndex, anim, loop).TimeScale = timeScale;
         CoroutineManager.Instance.StartCoroutine(CheckCompleteRoutine());
     }
 

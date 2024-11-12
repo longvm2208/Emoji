@@ -1,0 +1,222 @@
+{
+"skeleton": { "hash": "kW0rr3g/UU0", "spine": "4.0.64", "images": "./images/", "audio": "I:/My Drive/CyanFlame/Emoji/Animation/Level03" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "02", "parent": "root", "rotation": 0.06 },
+	{ "name": "04_1", "parent": "02", "x": -0.02, "y": -18.9 },
+	{ "name": "04_2", "parent": "02", "x": 0.17, "y": 166.96 },
+	{ "name": "04_3", "parent": "02" },
+	{ "name": "03", "parent": "root" },
+	{ "name": "BigItems/Son2", "parent": "03", "x": 6.81, "y": -426.92 },
+	{ "name": "BigItems/Son1", "parent": "BigItems/Son2", "length": 79.77, "rotation": 88.91, "x": -6.84, "y": 51.65 },
+	{ "name": "05", "parent": "root" },
+	{ "name": "Text01", "parent": "05", "rotation": 5.64, "x": -48, "y": 470.91 },
+	{ "name": "MaskText01", "parent": "Text01", "x": -1043.1, "y": 1.53 },
+	{ "name": "Text02", "parent": "05", "rotation": 5.22, "x": 28.04, "y": -564.1 },
+	{ "name": "MaskText02", "parent": "Text02", "x": -1043.1, "y": 1.53 },
+	{ "name": "Kiss1", "parent": "05", "x": 370.73, "y": 291.64 }
+],
+"slots": [
+	{ "name": "Demo", "bone": "05", "color": "ffffff57" },
+	{ "name": "04_1", "bone": "04_1" },
+	{ "name": "04_2", "bone": "04_2" },
+	{ "name": "04_3", "bone": "04_3" },
+	{ "name": "BigItems/Son1", "bone": "BigItems/Son1" },
+	{ "name": "BigItems/Son2", "bone": "BigItems/Son2" },
+	{ "name": "MaskText01", "bone": "MaskText01", "attachment": "MaskText01" },
+	{ "name": "Text01", "bone": "Text01" },
+	{ "name": "MaskText02", "bone": "MaskText02", "attachment": "MaskText01" },
+	{ "name": "Text02", "bone": "Text02" },
+	{ "name": "Kiss1", "bone": "Kiss1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"04_1": {
+				"BigItems/04_1": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, 30, -46, 1, 1, 2, -30, -46, 1, 1, 3, -30.19, -138.86, 1, 1, 3, 29.81, -138.86, 1 ],
+					"hull": 4,
+					"edges": [ 0, 2, 2, 4, 4, 6, 0, 6 ],
+					"width": 60,
+					"height": 93
+				}
+			},
+			"04_2": {
+				"BigItems/04_2": { "y": 0.5, "width": 97, "height": 306 }
+			},
+			"04_3": {
+				"BigItems/04_3": { "y": 0.5, "width": 111, "height": 394 }
+			},
+			"BigItems/Son1": {
+				"BigItems/Son1": { "x": 104.83, "y": 1.47, "rotation": -88.91, "width": 141, "height": 220 }
+			},
+			"BigItems/Son2": {
+				"BigItems/Son2": { "x": -6.81, "y": 156.99, "width": 230, "height": 311 }
+			},
+			"Kiss1": {
+				"BGReward/Kiss": { "x": 0.5, "width": 251, "height": 204 }
+			},
+			"MaskText01": {
+				"MaskText01": {
+					"type": "clipping",
+					"end": "Text01",
+					"vertexCount": 4,
+					"vertices": [ 595.05, 245.79, 606.61, -169.24, -313.22, -207.36, -328.39, 219.25 ],
+					"color": "ce3a3aff"
+				}
+			},
+			"MaskText02": {
+				"MaskText01": {
+					"type": "clipping",
+					"end": "Text02",
+					"vertexCount": 4,
+					"vertices": [ 595.05, 245.79, 606.61, -169.24, -313.22, -207.36, -328.39, 219.25 ],
+					"color": "ce3a3aff"
+				}
+			},
+			"Text01": {
+				"BGReward/Very Demure": { "x": 0.5, "width": 841, "height": 119 }
+			},
+			"Text02": {
+				"BGReward/Very Mindful": { "x": 0.5, "width": 824, "height": 133 }
+			}
+		}
+	}
+],
+"events": {
+	"03": {}
+},
+"animations": {
+	"02": {
+		"slots": {
+			"04_1": {
+				"attachment": [
+					{ "name": "BigItems/04_1" }
+				]
+			},
+			"04_2": {
+				"attachment": [
+					{ "name": "BigItems/04_2" }
+				]
+			},
+			"04_3": {
+				"attachment": [
+					{ "name": "BigItems/04_3" }
+				]
+			}
+		},
+		"bones": {
+			"04_2": {
+				"translate": [
+					{
+						"curve": [ 0.278, 0, 1.056, -0.09, 0.278, 0, 1.056, -93.61 ]
+					},
+					{ "time": 1.3333, "x": -0.09, "y": -93.61 }
+				]
+			}
+		}
+	},
+	"03": {
+		"slots": {
+			"BigItems/Son1": {
+				"attachment": [
+					{ "name": "BigItems/Son1" }
+				]
+			},
+			"BigItems/Son2": {
+				"attachment": [
+					{ "name": "BigItems/Son2" }
+				]
+			}
+		},
+		"bones": {
+			"BigItems/Son1": {
+				"translate": [
+					{},
+					{ "time": 1.2, "x": 4.88, "y": 256.24 }
+				]
+			},
+			"03": {
+				"rotate": [
+					{ "time": 1.3 },
+					{ "time": 1.4667, "value": -10.07 },
+					{ "time": 1.7333, "value": -11.83 },
+					{ "time": 2.0333, "value": 19.45 },
+					{ "time": 2.3, "value": 20.57 },
+					{ "time": 2.5, "value": -10.07 },
+					{ "time": 2.7667, "value": -11.83 },
+					{ "time": 3.0667, "value": 19.45 },
+					{ "time": 3.3333, "value": 20.57 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.6667, "y": 19.71 },
+					{ "time": 1.3 },
+					{ "time": 1.4667, "x": -70.72 },
+					{ "time": 1.7333, "x": -124.44 },
+					{ "time": 2.0333, "x": 132.39 },
+					{ "time": 2.3, "x": 183.79 },
+					{ "time": 2.5, "x": -70.72 },
+					{ "time": 2.7667, "x": -124.44 },
+					{ "time": 3.0667, "x": 132.39 },
+					{ "time": 3.3333, "x": 183.79 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 1.3, "name": "03" },
+			{ "time": 3, "name": "03" }
+		]
+	},
+	"05": {
+		"slots": {
+			"Kiss1": {
+				"rgba": [
+					{ "time": 4.5, "color": "ffffff00" },
+					{ "time": 4.6, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 11.6667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 4.5, "name": "BGReward/Kiss" }
+				]
+			},
+			"Text01": {
+				"attachment": [
+					{ "name": "BGReward/Very Demure" }
+				]
+			},
+			"Text02": {
+				"attachment": [
+					{ "name": "BGReward/Very Mindful" }
+				]
+			}
+		},
+		"bones": {
+			"MaskText01": {
+				"translate": [
+					{},
+					{ "time": 3, "x": 889.62 }
+				]
+			},
+			"MaskText02": {
+				"translate": [
+					{ "time": 1.5 },
+					{ "time": 4.5, "x": 889.62 }
+				]
+			},
+			"Kiss1": {
+				"scale": [
+					{ "time": 4.5, "x": 4.484, "y": 4.484 },
+					{ "time": 4.6333 },
+					{ "time": 4.7, "x": 1.091, "y": 1.091 },
+					{ "time": 4.7667 }
+				]
+			}
+		}
+	}
+}
+}

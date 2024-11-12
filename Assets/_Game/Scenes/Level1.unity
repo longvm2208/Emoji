@@ -497,6 +497,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 2
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -1067,6 +1068,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 4
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -1620,7 +1622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 376421095}
   endRotation: {x: 0, y: 0, z: -180}
-  duration: 1
+  duration: 1.25
   ease: 1
   onComplete:
     m_PersistentCalls:
@@ -1915,6 +1917,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 3
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -3405,6 +3408,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 2
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -5124,6 +5128,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 3
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -5650,7 +5655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1654808988}
   endRotation: {x: 0, y: 0, z: -180}
-  duration: 1
+  duration: 1.25
   ease: 1
   onComplete:
     m_PersistentCalls:

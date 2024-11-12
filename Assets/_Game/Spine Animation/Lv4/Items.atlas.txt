@@ -1,0 +1,30 @@
+Items.png
+size:1850,307
+filter:Linear,Linear
+pma:true
+BGReward/Kiss
+bounds:1156,56,249,202
+offsets:1,1,251,204
+rotate:90
+BGReward/Very Demure
+bounds:2,51,841,119
+BGReward/Very Mindful
+bounds:2,172,824,133
+BigItems/04_1
+bounds:845,15,60,93
+rotate:90
+BigItems/04_2
+bounds:1754,2,94,303
+offsets:1,1,97,306
+BigItems/04_3
+bounds:1360,56,107,392
+offsets:2,1,111,394
+rotate:90
+BigItems/Son1
+bounds:1534,165,138,218
+offsets:2,1,141,220
+rotate:90
+BigItems/Son2
+bounds:845,77,228,309
+offsets:1,1,230,311
+rotate:90

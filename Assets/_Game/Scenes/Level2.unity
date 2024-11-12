@@ -443,6 +443,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 05
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -2857,6 +2858,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 03
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -7258,6 +7260,7 @@ MonoBehaviour:
   trackIndex: 0
   anim: 04
   loop: 0
+  timeScale: 0.8
   onComplete:
     m_PersistentCalls:
       m_Calls:

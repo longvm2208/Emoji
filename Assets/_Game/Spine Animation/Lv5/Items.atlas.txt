@@ -1,0 +1,7 @@
+Items.png
+size:254,254
+filter:Linear,Linear
+pma:true
+BGReward/Circle_04
+bounds:2,2,250,250
+offsets:3,2,255,254
