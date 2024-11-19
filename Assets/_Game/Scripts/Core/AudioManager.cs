@@ -13,6 +13,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     [SerializeField] private MusicByIdDictionary musicById;
     [SerializeField] private SoundByIdDictionary soundById;
 
+    Coroutine soundCoroutine;
+
     public void Initialize()
     {
         ToggleAudioSource();
@@ -49,7 +51,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         soundSource.clip = soundById[id];
         soundSource.Play();
 
-        ScheduleUtils.DelayTask(duration, () =>
+        soundCoroutine = ScheduleUtils.DelayTask(duration, () =>
         {
             if (soundSource.loop)
             {
@@ -57,6 +59,13 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
                 soundSource.Stop();
             }
         });
+    }
+
+    public void StopSound()
+    {
+        soundSource.loop = false;
+        soundSource.Stop();
+        ScheduleUtils.StopCoroutine(soundCoroutine);
     }
 }
 

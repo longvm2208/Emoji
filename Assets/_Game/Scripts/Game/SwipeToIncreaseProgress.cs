@@ -11,6 +11,7 @@ public class SwipeToIncreaseProgress : MonoBehaviour
     [SerializeField] UnityEvent onComplete;
 
     bool isSwiping;
+    bool isPlayingSound;
     float progress;
     Vector3 lastPos;
 
@@ -43,10 +44,26 @@ public class SwipeToIncreaseProgress : MonoBehaviour
         if (isSwiping)
         {
             float distane = Vector3.Distance(transform.position, lastPos);
+            if (Mathf.Approximately(distane, 0) && isPlayingSound)
+            {
+                isPlayingSound = false;
+                AudioManager.Instance.StopSound();
+            }
+            else if (distane > 0 && !isPlayingSound)
+            {
+                isPlayingSound = true;
+                AudioManager.Instance.PlaySound(SoundId.cleaning, 100);
+            }
             progress += distane * progressIncreaseRate;
             progress = Mathf.Clamp01(progress);
             onProgress?.Invoke(progress);
-            if (Mathf.Approximately(progress, 1)) onComplete?.Invoke();
+            if (Mathf.Approximately(progress, 1))
+            {
+                onComplete?.Invoke();
+                isSwiping = false;
+                isPlayingSound = false;
+                AudioManager.Instance.StopSound();
+            }
             lastPos = transform.position;
         }
     }

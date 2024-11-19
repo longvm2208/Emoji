@@ -30,6 +30,7 @@ public class ScreenshotToSprite : SingletonMonoBehaviour<ScreenshotToSprite>
             new Rect(0, 0, screenshot.width, screenshot.height),
             new Vector2(0.5f, 0.5f) // Pivot point in the center
         );
+        AudioManager.Instance.PlaySound(SoundId.take_a_photo);
         flashGo.SetActive(true);
         yield return null;
         yield return null;
