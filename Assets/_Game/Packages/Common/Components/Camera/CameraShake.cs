@@ -2,9 +2,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour
+public class CameraShake : SingletonMonoBehaviour<CameraShake>
 {
     [SerializeField] Transform cameraTransform;
+
+    private void OnValidate()
+    {
+        if (cameraTransform == null) cameraTransform = Camera.main.transform;
+    }
 
     [Button(ButtonStyle.FoldoutButton)]
     public void ShakePosition(float duration, float magnitude)

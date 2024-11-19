@@ -12,7 +12,7 @@ public class SwipingHand2D : MonoBehaviour
     [SerializeField] Ease ease;
     [SerializeField] float delay = 1;
 
-    bool isEnable = true;
+    bool isEnable;
     Coroutine coroutine;
 
     [Button]

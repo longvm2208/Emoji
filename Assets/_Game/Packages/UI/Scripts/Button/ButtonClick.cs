@@ -33,8 +33,7 @@ public class ButtonClick : MonoBehaviour
 
         if (playSound)
         {
-            // Play Sound
-            //AudioManager.Instance.PlaySound(SoundId.Click);
+            AudioManager.Instance.PlaySound(SoundId.pop_click);
         }
 
         if (vibrate)

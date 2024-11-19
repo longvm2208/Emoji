@@ -9,9 +9,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     [SerializeField, Range(0.01f, 10)] float timeScale;
     [SerializeField] RectTransform canvasRt;
     public Vector2 CanvasSizeDelta => canvasRt.sizeDelta;
+    public RectTransform CanvasRt => canvasRt;
     [SerializeField, ExposedScriptableObject]
     GameSettings gameSettings;
     public GameSettings GameSettings => gameSettings;
+    public bool IsEnableAds => gameSettings.IsEnableAds;
 
     DateTime startupTime;
     public DateTime Now => startupTime + TimeSpan.FromSeconds(Time.realtimeSinceStartup);

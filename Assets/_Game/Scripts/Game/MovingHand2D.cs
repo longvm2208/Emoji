@@ -11,12 +11,15 @@ public class MovingHand2D : MonoBehaviour
     [SerializeField] float stop = 0.25f;
     [SerializeField] Ease ease = Ease.Linear;
 
-    bool isEnable = true;
+    [SerializeField] bool isEnable;
+    bool isMoving;
     IEnumerator coroutine;
 
     public void Move()
     {
         if (!isEnable) return;
+        if (isMoving) return;
+        isMoving = true;
         if (coroutine == null) coroutine = MoveRoutine();
         CoroutineManager.Instance.StartCoroutine(coroutine);
     }
@@ -39,6 +42,8 @@ public class MovingHand2D : MonoBehaviour
     public void Stop()
     {
         if (!isEnable) return;
+        if (!isMoving) return;
+        isMoving = false;
         if (coroutine != null) CoroutineManager.Instance.StopCoroutine(coroutine);
         moving.DOKill();
         gameObject.SetActive(false);

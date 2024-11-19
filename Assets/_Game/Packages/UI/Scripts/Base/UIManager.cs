@@ -17,6 +17,11 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
     public PanelBase Panel => panel;
 
     #region PANEL
+    public T GetPanel<T>() where T : PanelBase
+    {
+        return panel as T;
+    }
+
     public void EnablePanel()
     {
         panelDisableCount--;

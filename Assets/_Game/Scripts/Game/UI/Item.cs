@@ -33,8 +33,8 @@ public class Item : MonoBehaviour
     public void OnClick()
     {
         button.interactable = false;
-        itemBar.OnItemSelected();
         onClick?.Invoke();
+        itemBar.OnItemSelected();
     }
     #endregion
 }

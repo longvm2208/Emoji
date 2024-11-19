@@ -6,6 +6,10 @@ public class ButtonPlay : MonoBehaviour
 {
     public void OnClick()
     {
-        LoadSceneManager.Instance.LoadSceneLevel(GameData.Instance.SelectedLevelIndex);
+        MaxManager.Instance.ShowInterstitial("home_button_play", () =>
+        {
+            LoadSceneManager.Instance.LoadSceneLevel(GameData.Instance.SelectedLevelIndex);
+            MaxManager.Instance.HideMRec();
+        });
     }
 }

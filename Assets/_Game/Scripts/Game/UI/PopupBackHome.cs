@@ -3,12 +3,18 @@
 	#region UI EVENTS
 	public void OnClickYes()
 	{
-		LoadSceneManager.Instance.LoadScene(SceneId.Home);
+		MaxManager.Instance.ShowInterstitial("popup_back_home_button_yes", () =>
+		{
+            LoadSceneManager.Instance.LoadScene(SceneId.Home);
+        });
 	}
 
 	public void OnClickNo()
 	{
-		Close();
+		MaxManager.Instance.ShowInterstitial("popup_back_home_button_no", () =>
+		{
+            Close();
+        });
 	}
 	#endregion
 }

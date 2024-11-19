@@ -6,6 +6,7 @@ public class GameData
 {
     public static GameData Instance => DataManager.Instance.GameData;
 
+    public int HintsCount;
     [Header("LEVEL")]
     public int CurrentLevelIndex;
     public int SelectedLevelIndex;
@@ -15,6 +16,7 @@ public class GameData
 
     public GameData()
     {
+        HintsCount = 1;
         // LEVEL
         CurrentLevelIndex = 0;
         SelectedLevelIndex = 0;

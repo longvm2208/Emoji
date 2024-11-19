@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PopupLevel : PopupBase
 {
+    [SerializeField] RectTransform mrecPoint;
 	[SerializeField] ScrollRect scrollRect;
     [SerializeField] RectTransform contentRt;
     [SerializeField] LevelOptionUI[] levelOptions;
@@ -19,6 +20,7 @@ public class PopupLevel : PopupBase
 		}
         RectTransform targetRt = levelOptions[GameData.Instance.SelectedLevelIndex].MyRt;
         StartCoroutine(ScrollSnapRoutine(targetRt));
+        MaxManager.Instance.ShowMRec(mrecPoint);
     }
 
     IEnumerator ScrollSnapRoutine(RectTransform itemRt)
@@ -35,7 +37,11 @@ public class PopupLevel : PopupBase
     #region UI EVENTS
     public void OnClickBack()
 	{
-		Close();
+        MaxManager.Instance.ShowInterstitial("popup_menu_button_back", () =>
+        {
+            UIManager.Instance.GetPanel<PanelHome>().ShowMrec();
+            Close();
+        });
 	}
 	#endregion
 }

@@ -48,8 +48,12 @@ public class LevelOptionUI : MonoBehaviour
     #region UI EVENTS
     public void OnClick()
     {
-        GameData.Instance.SelectedLevelIndex = index;
-        LoadSceneManager.Instance.LoadSceneLevel(index);
+        MaxManager.Instance.ShowInterstitial("popup_menu_level_option", () =>
+        {
+            GameData.Instance.SelectedLevelIndex = index;
+            LoadSceneManager.Instance.LoadSceneLevel(index);
+            MaxManager.Instance.HideMRec();
+        });
     }
     #endregion
 }

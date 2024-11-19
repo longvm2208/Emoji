@@ -42,15 +42,21 @@ public class PopupWin : PopupBase
 
     public void OnClickRestart()
     {
-        LoadSceneManager.Instance.ReloadCurrentScene();
+        MaxManager.Instance.ShowInterstitial("popup_end_card_button_restart", () =>
+        {
+            LoadSceneManager.Instance.ReloadCurrentScene();
+        });
     }
 
     public void OnClickNext()
     {
-        if (GameData.Instance.SelectedLevelIndex < ConfigManager.Instance.LevelAmount - 1)
+        MaxManager.Instance.ShowInterstitial("popup_end_card_button_next", () =>
         {
-            GameData.Instance.SelectedLevelIndex++;
-        }
-        LoadSceneManager.Instance.LoadSceneLevel(GameData.Instance.SelectedLevelIndex);
+            if (GameData.Instance.SelectedLevelIndex < ConfigManager.Instance.LevelAmount - 1)
+            {
+                GameData.Instance.SelectedLevelIndex++;
+            }
+            LoadSceneManager.Instance.LoadSceneLevel(GameData.Instance.SelectedLevelIndex);
+        });
     }
 }

@@ -4,10 +4,16 @@ using UnityEngine.Events;
 
 public class CollisionDetector : MonoBehaviour
 {
+    [SerializeField] BigItem bigItem;
     [SerializeField] List<Collider2D> colliders;
     [SerializeField] UnityEvent[] onTriggerEnters;
 
     Collider2D currentCollider;
+
+    private void OnValidate()
+    {
+        bigItem = GetComponent<BigItem>();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,5 +32,9 @@ public class CollisionDetector : MonoBehaviour
         int id = colliders.IndexOf(currentCollider);
         onTriggerEnters[id]?.Invoke();
         currentCollider = null;
+        if (bigItem != null)
+        {
+            bigItem.OnCheckCollisionCompleted();
+        }
     }
 }

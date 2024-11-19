@@ -56,30 +56,39 @@ public class PopupSpecialStep : PopupBase
     #region UI EVENTS
 	public void OnClickRestart()
 	{
-        if (GameData.Instance.CurrentLevelIndex == GameData.Instance.SelectedLevelIndex)
+        MaxManager.Instance.ShowInterstitial("popup_special_step_button_restart", () =>
         {
-            GameData.Instance.CurrentLevelIndex++;
-        }
-        LoadSceneManager.Instance.ReloadCurrentScene();
+            if (GameData.Instance.CurrentLevelIndex == GameData.Instance.SelectedLevelIndex)
+            {
+                GameData.Instance.CurrentLevelIndex++;
+            }
+            LoadSceneManager.Instance.ReloadCurrentScene();
+        });
     }
 
     public void OnClickSpecial()
 	{
-		onClickSpecial?.Invoke();
-		Close();
+        MaxManager.Instance.ShowRewardedAd("special_step", () =>
+        {
+            onClickSpecial?.Invoke();
+            Close();
+        });
 	}
 
 	public void OnClickClose()
 	{
-        if (GameData.Instance.CurrentLevelIndex == GameData.Instance.SelectedLevelIndex)
+        MaxManager.Instance.ShowInterstitial("popup_special_step_button_close", () =>
         {
-            GameData.Instance.CurrentLevelIndex++;
-        }
-        if (GameData.Instance.SelectedLevelIndex < ConfigManager.Instance.LevelAmount - 1)
-        {
-            GameData.Instance.SelectedLevelIndex++;
-        }
-        LoadSceneManager.Instance.LoadScene(SceneId.Home);
+            if (GameData.Instance.CurrentLevelIndex == GameData.Instance.SelectedLevelIndex)
+            {
+                GameData.Instance.CurrentLevelIndex++;
+            }
+            if (GameData.Instance.SelectedLevelIndex < ConfigManager.Instance.LevelAmount - 1)
+            {
+                GameData.Instance.SelectedLevelIndex++;
+            }
+            LoadSceneManager.Instance.LoadScene(SceneId.Home);
+        });
     }
     #endregion
 }
