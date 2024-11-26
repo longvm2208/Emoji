@@ -205,32 +205,29 @@ public class FirebaseManager : SingletonMonoBehaviour<FirebaseManager>
     #endregion
 
     #region LEVEL
-    public void level_start(int chapter, int level)
+    public void level_start(int level)
     {
-        LogEvent(nameof(level_start),
-            new Parameter(nameof(chapter), (chapter + 1).ToString()),
-            new Parameter(nameof(level), (level + 1).ToString()));
+        LogEvent(nameof(level_start), new Parameter(nameof(level), (level + 1).ToString()));
     }
 
-    public void level_complete(int chapter, int level, int timeplayed)
+    public void level_complete(int level, int timeplayed)
     {
         LogEvent(nameof(level_complete),
-            new Parameter(nameof(chapter), (chapter + 1).ToString()),
             new Parameter(nameof(level), (level + 1).ToString()),
             new Parameter(nameof(timeplayed), timeplayed.ToString()));
     }
 
-    public void level_fail(int chapter, int level, int failcount)
+    public void level_fail(int level, int failcount)
     {
         LogEvent(nameof(level_fail),
-            new Parameter(nameof(chapter), (chapter + 1).ToString()),
             new Parameter(nameof(level), (level + 1).ToString()),
             new Parameter(nameof(failcount), failcount.ToString()));
     }
 
-    public void level_checkpoint(int chapter, int level)
+    public void level_checkpoint(int level)
     {
-        LogEvent("checkpoint_" + chapter + "_" + level);
+        LogEvent("checkpoint_" + level);
+        AppsflyerEventRegister.af_level_achieved(level);
     }
     #endregion
 }

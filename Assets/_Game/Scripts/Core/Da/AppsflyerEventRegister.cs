@@ -41,9 +41,9 @@ public class AppsflyerEventRegister : MonoBehaviour
             });
     }
 
-    public static void af_level_achieved(int chapter, int level)
+    public static void af_level_achieved(int level)
     {
-        AppsFlyer.sendEvent("af_level_achieved_" + chapter + "_" + level, new());
+        AppsFlyer.sendEvent("af_level_achieved_" + level, new());
     }
     #endregion
 

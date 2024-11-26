@@ -56,14 +56,20 @@ public class PopupSpecialStep : PopupBase
     #region UI EVENTS
 	public void OnClickRestart()
 	{
+        PanelGame panelGame = UIManager.Instance.GetPanel<PanelGame>();
+        float duration = Time.realtimeSinceStartup - panelGame.startTime;
+        FirebaseManager.Instance.level_complete(GameData.Instance.SelectedLevelIndex, (int)duration);
+
         MaxManager.Instance.ShowInterstitial("popup_special_step_button_restart", () =>
         {
             if (GameData.Instance.CurrentLevelIndex == GameData.Instance.SelectedLevelIndex)
             {
+                FirebaseManager.Instance.level_checkpoint(GameData.Instance.SelectedLevelIndex);
                 GameData.Instance.CurrentLevelIndex++;
             }
             LoadSceneManager.Instance.ReloadCurrentScene();
         });
+
     }
 
     public void OnClickSpecial()
@@ -77,10 +83,15 @@ public class PopupSpecialStep : PopupBase
 
 	public void OnClickClose()
 	{
+        PanelGame panelGame = UIManager.Instance.GetPanel<PanelGame>();
+        float duration = Time.realtimeSinceStartup - panelGame.startTime;
+        FirebaseManager.Instance.level_complete(GameData.Instance.SelectedLevelIndex, (int)duration);
+
         MaxManager.Instance.ShowInterstitial("popup_special_step_button_close", () =>
         {
             if (GameData.Instance.CurrentLevelIndex == GameData.Instance.SelectedLevelIndex)
             {
+                FirebaseManager.Instance.level_checkpoint(GameData.Instance.SelectedLevelIndex);
                 GameData.Instance.CurrentLevelIndex++;
             }
             if (GameData.Instance.SelectedLevelIndex < ConfigManager.Instance.LevelAmount - 1)

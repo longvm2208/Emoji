@@ -16,6 +16,7 @@ public class PopupWin : PopupBase
         screenshotImage.sprite = ScreenshotToSprite.Instance.ScreenshotSprite;
         if (GameData.Instance.CurrentLevelIndex == GameData.Instance.SelectedLevelIndex)
         {
+            FirebaseManager.Instance.level_checkpoint(GameData.Instance.SelectedLevelIndex);
             GameData.Instance.CurrentLevelIndex++;
         }
         float baseRatio = 9f / 16;
@@ -42,6 +43,10 @@ public class PopupWin : PopupBase
 
     public void OnClickRestart()
     {
+        PanelGame panelGame = UIManager.Instance.GetPanel<PanelGame>();
+        float duration = Time.realtimeSinceStartup - panelGame.startTime;
+        FirebaseManager.Instance.level_complete(GameData.Instance.SelectedLevelIndex, (int)duration);
+
         MaxManager.Instance.ShowInterstitial("popup_end_card_button_restart", () =>
         {
             LoadSceneManager.Instance.ReloadCurrentScene();
@@ -50,6 +55,10 @@ public class PopupWin : PopupBase
 
     public void OnClickNext()
     {
+        PanelGame panelGame = UIManager.Instance.GetPanel<PanelGame>();
+        float duration = Time.realtimeSinceStartup - panelGame.startTime;
+        FirebaseManager.Instance.level_complete(GameData.Instance.SelectedLevelIndex, (int)duration);
+
         MaxManager.Instance.ShowInterstitial("popup_end_card_button_next", () =>
         {
             if (GameData.Instance.SelectedLevelIndex < ConfigManager.Instance.LevelAmount - 1)
