@@ -1457,6 +1457,7 @@ GameObject:
   - component: {fileID: 1634056544}
   - component: {fileID: 1634056548}
   - component: {fileID: 1634056549}
+  - component: {fileID: 1634056550}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -1510,7 +1511,9 @@ MonoBehaviour:
   isAutoSaveOnLoad: 0
   autoSaveInterval: 5
   gameData:
+    showPopupRate: 1
     HintsCount: 1
+    rateStar: 0
     CurrentLevelIndex: 0
     SelectedLevelIndex: 0
     IsAudioEnabled: 1
@@ -1528,6 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelAmount: 5
+  LoadingInterstitial: 1
   InterstitialCapping: 15
   RewardedAdCapping: 15
 --- !u!114 &1634056546
@@ -1590,6 +1594,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17da7b930e0ef2f489cb152e0cbed176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1634056550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634056541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9469fad2ab4c14841b35dbf335799450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1826860003

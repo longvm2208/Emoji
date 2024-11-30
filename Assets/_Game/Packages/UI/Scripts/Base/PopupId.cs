@@ -9,4 +9,5 @@ public enum PopupId
     Settings = 2,
     BackHome = 3,
     NoInternet = 4,
+    Rate = 5,
 }

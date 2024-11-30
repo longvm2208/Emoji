@@ -1,4 +1,6 @@
+using Google.Play.Review;
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
@@ -12,6 +14,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public RectTransform CanvasRt => canvasRt;
     [SerializeField, ExposedScriptableObject]
     GameSettings gameSettings;
+#if UNITY_ANDROID
+    private ReviewManager reviewManager;
+    private PlayReviewInfo playReviewInfor;
+#endif
     public GameSettings GameSettings => gameSettings;
     public bool IsEnableAds => gameSettings.IsEnableAds;
 
@@ -63,6 +69,55 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         return isInternetAvailableEditor;
 #else
         return !(Application.internetReachability == NetworkReachability.NotReachable);
+#endif
+    }
+    #endregion
+
+    #region RATE GAME
+    public void RateGameInApp()
+    {
+        StartCoroutine(RateGameInAppRoutine());
+    }
+
+    private IEnumerator RateGameInAppRoutine()
+    {
+        ////Debug.Log("Begin Rate Game In App Routine");
+#if UNITY_ANDROID
+        reviewManager = new ReviewManager();
+
+        var requestFlowOperation = reviewManager.RequestReviewFlow();
+
+        yield return requestFlowOperation;
+
+        if (requestFlowOperation.Error != ReviewErrorCode.NoError)
+        {
+            //Debug.LogError("Request flow operation error");
+            yield break;
+        }
+        else
+        {
+            ////Debug.Log(requestFlowOperation.Error);
+        }
+
+        playReviewInfor = requestFlowOperation.GetResult();
+        var launchFlowOperation = reviewManager.LaunchReviewFlow(playReviewInfor);
+
+        yield return launchFlowOperation;
+        playReviewInfor = null;
+
+        if (launchFlowOperation.Error != ReviewErrorCode.NoError)
+        {
+            //Debug.LogError("Launch flow operation error");
+            yield break;
+        }
+        else
+        {
+            //Debug.Log(launchFlowOperation.Error);
+        }
+        ////Debug.Log("End Rate Game In App Routine");
+#elif UNITY_IOS
+        yield return null;
+        Device.RequestStoreReview();
 #endif
     }
     #endregion

@@ -34,6 +34,7 @@ public class Initializer : MonoBehaviour
         VibrationManager.Instance.Initialize();
         yield return null;
         MaxManager.Instance.Initialize();
+        AdMobManager.Instance.Initialize();
         yield return null;
         FirebaseManager.Instance.Initialize();
         yield return null;
@@ -41,7 +42,13 @@ public class Initializer : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         SetProgress(1);
         yield return new WaitUntil(() => GameManager.Instance.IsInternetAvailable());
-        LoadSceneManager.Instance.LoadScene(SceneId.Home, LoadSceneManager.Mode.Before);
+        LoadSceneManager.Instance.LoadScene(SceneId.Home, LoadSceneManager.Mode.Before, null, () =>
+        {
+            if (ConfigManager.Instance.LoadingInterstitial)
+            {
+                MaxManager.Instance.ShowInterstitial("loading");
+            }
+        });
     }
 
     void SetProgress(float progress)

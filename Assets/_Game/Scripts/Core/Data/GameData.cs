@@ -6,7 +6,9 @@ public class GameData
 {
     public static GameData Instance => DataManager.Instance.GameData;
 
+    public bool showPopupRate;
     public int HintsCount;
+    public int rateStar;
     [Header("LEVEL")]
     public int CurrentLevelIndex;
     public int SelectedLevelIndex;
@@ -16,7 +18,9 @@ public class GameData
 
     public GameData()
     {
-        HintsCount = 1;
+        showPopupRate = true;
+        HintsCount = 0;
+        rateStar = -1;
         // LEVEL
         CurrentLevelIndex = 0;
         SelectedLevelIndex = 0;

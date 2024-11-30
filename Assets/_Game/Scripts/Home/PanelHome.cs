@@ -12,6 +12,12 @@ public class PanelHome : PanelBase
         levelText.text = $"Level {GameData.Instance.SelectedLevelIndex + 1}";
         levels[GameData.Instance.SelectedLevelIndex].SetActive(true);
         ShowMrec();
+
+        if (GameData.Instance.showPopupRate && GameData.Instance.CurrentLevelIndex >= 2)
+        {
+            GameData.Instance.showPopupRate = false;
+            UIManager.Instance.OpenPopup(PopupId.Rate);
+        }
     }
 
     public void ShowMrec()

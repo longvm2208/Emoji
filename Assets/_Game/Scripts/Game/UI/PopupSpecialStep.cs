@@ -69,16 +69,23 @@ public class PopupSpecialStep : PopupBase
             }
             LoadSceneManager.Instance.ReloadCurrentScene();
         });
-
     }
 
     public void OnClickSpecial()
 	{
-        MaxManager.Instance.ShowRewardedAd("special_step", () =>
+        if (GameData.Instance.SelectedLevelIndex == 0)
         {
             onClickSpecial?.Invoke();
             Close();
-        });
+        }
+        else
+        {
+            MaxManager.Instance.ShowRewardedAd("special_step", () =>
+            {
+                onClickSpecial?.Invoke();
+                Close();
+            });
+        }
 	}
 
 	public void OnClickClose()
@@ -98,7 +105,7 @@ public class PopupSpecialStep : PopupBase
             {
                 GameData.Instance.SelectedLevelIndex++;
             }
-            LoadSceneManager.Instance.LoadScene(SceneId.Home);
+            LoadSceneManager.Instance.LoadSceneLevel(GameData.Instance.SelectedLevelIndex);
         });
     }
     #endregion

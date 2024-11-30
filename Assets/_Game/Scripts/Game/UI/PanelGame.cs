@@ -8,6 +8,7 @@ public class PanelGame : PanelBase
     {
         FirebaseManager.Instance.level_start(GameData.Instance.SelectedLevelIndex);
         startTime = Time.realtimeSinceStartup;
+
     }
 
     public void OnClickHome()

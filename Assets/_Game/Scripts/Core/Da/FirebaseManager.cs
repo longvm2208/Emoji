@@ -118,6 +118,7 @@ public class FirebaseManager : SingletonMonoBehaviour<FirebaseManager>
     {
         Debug.Log("Apply remote config data");
         ConfigManager.Instance.InterstitialCapping = GetInt("interstitial_capping");
+        ConfigManager.Instance.LoadingInterstitial = GetBool("loading_interstitial");
     }
     #endregion
 
