@@ -13,11 +13,7 @@ public class PanelHome : PanelBase
         levels[GameData.Instance.SelectedLevelIndex].SetActive(true);
         ShowMrec();
 
-        if (GameData.Instance.showPopupRate && GameData.Instance.CurrentLevelIndex >= 2)
-        {
-            GameData.Instance.showPopupRate = false;
-            UIManager.Instance.OpenPopup(PopupId.Rate);
-        }
+        
     }
 
     public void ShowMrec()

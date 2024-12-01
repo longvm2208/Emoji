@@ -32,6 +32,16 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         musicSource.Play();
     }
 
+    public void PauseMusic()
+    {
+        musicSource.enabled = false;
+    }
+
+    public void ResumeMusic()
+    {
+        musicSource.enabled = true;
+    }
+
     public void PlaySound(SoundId id)
     {
         if (!soundById.ContainsKey(id) || soundById[id] == null) return;
