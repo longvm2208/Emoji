@@ -12,7 +12,7 @@ public class ShowMrec : MonoBehaviour
     public void Hide()
     {
         Debug.Log("hide mrec");
-        MaxManager.Instance.HideMRec();
+        //MaxManager.Instance.HideMRec();
         AudioManager.Instance.ResumeMusic();
     }
 }

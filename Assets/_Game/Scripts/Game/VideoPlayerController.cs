@@ -6,6 +6,7 @@ using UnityEngine.Video;
 public class VideoPlayerController : MonoBehaviour 
 {
     [SerializeField] VideoPlayer videoPlayer;
+    [SerializeField] GameObject canvasGo;
     [SerializeField] RectTransform imageRt;
     [SerializeField] UnityEvent onComplete;
 
@@ -31,6 +32,9 @@ public class VideoPlayerController : MonoBehaviour
             imageRt.sizeDelta *= currentRatio / baseRatio;
         }
 
+        imageRt.ChangeAnchorPosY(canvasSizeDelta.y * (0.5f - 0.33f));
+
+        canvasGo.SetActive(false);
         imageRt.gameObject.SetActive(false);
         videoPlayer.loopPointReached += OnLoopPointReached;
     }
@@ -42,6 +46,7 @@ public class VideoPlayerController : MonoBehaviour
 
     private void OnLoopPointReached(VideoPlayer source)
     {
+        Debug.Log("End video");
         onComplete?.Invoke();
         //imageRt.gameObject.SetActive(false);
     }
@@ -53,7 +58,9 @@ public class VideoPlayerController : MonoBehaviour
 
     public void Play()
     {
+        Debug.Log("Play video");
         videoPlayer.Play();
+        canvasGo.SetActive(true);
         imageRt.gameObject.SetActive(true);
     }
 }
