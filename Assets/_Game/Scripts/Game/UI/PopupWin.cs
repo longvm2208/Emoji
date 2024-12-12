@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using GoogleMobileAds.Api;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,7 +41,7 @@ public class PopupWin : PopupBase
         //    maskRt.DOAnchorPosY(38, 0.75f);
         //    maskRt.DOSizeDelta(new Vector2(590, 570), 0.75f);
         //});
-        MaxManager.Instance.ShowMRec(mrecPoint);
+        MaxManager.Instance.ShowMRec(MaxSdkBase.AdViewPosition.BottomCenter);
     }
 
     public void OnClickRestart()

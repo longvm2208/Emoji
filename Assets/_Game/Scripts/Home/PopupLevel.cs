@@ -20,7 +20,7 @@ public class PopupLevel : PopupBase
 		}
         RectTransform targetRt = levelOptions[GameData.Instance.SelectedLevelIndex].MyRt;
         StartCoroutine(ScrollSnapRoutine(targetRt));
-        MaxManager.Instance.ShowMRec(mrecPoint);
+        MaxManager.Instance.ShowMRec(MaxSdkBase.AdViewPosition.BottomCenter);
     }
 
     IEnumerator ScrollSnapRoutine(RectTransform itemRt)

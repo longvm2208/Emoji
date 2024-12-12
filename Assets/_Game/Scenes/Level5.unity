@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 175345605}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.55, y: -1.26, z: 0}
+  m_LocalPosition: {x: 2.01, y: -1.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 436365331}
-  position: {x: -1.1, y: -2.36, z: 0}
+  position: {x: -2.2, y: -2.36, z: 0}
   isLocal: 0
 --- !u!114 &436365337
 MonoBehaviour:
@@ -1258,7 +1258,7 @@ Transform:
   m_GameObject: {fileID: 446129885}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.29, y: -1.26, z: 0}
+  m_LocalPosition: {x: -2.1, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2997,7 +2997,7 @@ Transform:
   m_GameObject: {fileID: 1369515149}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.21, y: -1.271, z: 0}
+  m_LocalPosition: {x: -2.21, y: -2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3119,7 +3119,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 3.26}
+    oldSize: {x: 0.87, y: 5.55}
     newSize: {x: 0.52, y: 3.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3723,7 +3723,7 @@ Transform:
   m_GameObject: {fileID: 1481830821}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.37, y: -7.6, z: 0}
+  m_LocalPosition: {x: 0.86, y: -5.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3905,7 +3905,7 @@ Transform:
   m_GameObject: {fileID: 1504925377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.059, y: 0.011, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4108,6 +4108,7 @@ MonoBehaviour:
   myRt: {fileID: 1557080637}
   handRt: {fileID: 2007360454}
   buttonHint: {fileID: 1460422875}
+  changeBackgroundSprite: {fileID: 1874029252}
   items:
   - {fileID: 1255430185}
   - {fileID: 1679328213}
@@ -5005,7 +5006,7 @@ SpriteRenderer:
   m_Size: {x: 1.46, y: 0.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1816709835
@@ -5665,7 +5666,7 @@ SpriteRenderer:
   m_Size: {x: 8.41, y: 6.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1874029248
@@ -5679,6 +5680,7 @@ GameObject:
   - component: {fileID: 1874029251}
   - component: {fileID: 1874029250}
   - component: {fileID: 1874029249}
+  - component: {fileID: 1874029252}
   m_Layer: 0
   m_Name: BG (1)
   m_TagString: Untagged
@@ -5766,6 +5768,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874029252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874029248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8eb51ec0e76d4448b8efcf94b56afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1874029250}
+  sprite: {fileID: 21300000, guid: e55ec430e42b1804c9be5367bf7373e3, type: 3}
 --- !u!1 &1878418585
 GameObject:
   m_ObjectHideFlags: 0
@@ -6745,7 +6761,7 @@ Transform:
   m_GameObject: {fileID: 2025022116}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 0.08, z: 0}
+  m_LocalPosition: {x: -0.02, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

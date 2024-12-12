@@ -13,6 +13,7 @@ public class AdMobManager : SingletonMonoBehaviour<AdMobManager>
 
     // RELEASE ID
     private string appOpenAdUnitId = "ca-app-pub-9819920607806935/4603691114";
+    const string interstitialAdUnitId = "ca-app-pub-9819920607806935/7448540407";
     //private string bannerAdUnitId = "ca-app-pub-9819920607806935/9603571357";
 #elif UNITY_IOS
     private string appOpenAdUnitId = "";
@@ -76,7 +77,7 @@ public class AdMobManager : SingletonMonoBehaviour<AdMobManager>
             //LoadBannerAd(false);
         });
 
-        //ShowAOAOnOpen();
+        ShowAOAOnOpen();
     }
 
     void ShowAOAOnOpen()
@@ -86,15 +87,12 @@ public class AdMobManager : SingletonMonoBehaviour<AdMobManager>
 
     IEnumerator ShowAOAOnOpenRoutine()
     {
-        //if (GameData.Instance.CurrentChapterIndex == 0 && GameData.Instance.CurrentLevelIndex == 0) yield break;
-        //yield return new WaitUntil(() => IsAppOpenAdAvailable);
-        //if (LoadSceneManager.Instance.CurrentScene == SceneId.Load)
-        //{
-        //    yield return new WaitUntil(() => LoadSceneManager.Instance.CurrentScene != SceneId.Load);
-        //    ShowAppOpenAd();
-        //}
-
-        yield break;
+        yield return new WaitUntil(() => IsAppOpenAdAvailable);
+        if (LoadSceneManager.Instance.CurrentScene == SceneId.Load)
+        {
+            yield return new WaitUntil(() => LoadSceneManager.Instance.CurrentScene != SceneId.Load);
+            ShowAppOpenAd();
+        }
     }
 
     #region APP OPEN AD

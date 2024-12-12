@@ -9,6 +9,7 @@ public class VideoPlayerController : MonoBehaviour
     [SerializeField] GameObject canvasGo;
     [SerializeField] RectTransform imageRt;
     [SerializeField] UnityEvent onComplete;
+    [SerializeField] RectTransform bgRt;
 
     private void OnValidate()
     {
@@ -26,10 +27,12 @@ public class VideoPlayerController : MonoBehaviour
         if (baseRatio > currentRatio)
         {
             imageRt.sizeDelta *= baseRatio / currentRatio;
+            bgRt.sizeDelta *= baseRatio / currentRatio;
         }
         else
         {
             imageRt.sizeDelta *= currentRatio / baseRatio;
+            bgRt.sizeDelta *= currentRatio / baseRatio;
         }
 
         imageRt.ChangeAnchorPosY(canvasSizeDelta.y * (0.5f - 0.33f));

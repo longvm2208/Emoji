@@ -13,6 +13,7 @@ public class ItemBar : MonoBehaviour
     [SerializeField] RectTransform myRt;
     [SerializeField] RectTransform handRt;
     [SerializeField] ButtonHint buttonHint;
+    [SerializeField] ChangeBackgroundSprite changeBackgroundSprite;
     [SerializeField] Item[] items;
 
     bool isHint;
@@ -53,6 +54,7 @@ public class ItemBar : MonoBehaviour
             }
         }
         VibrationManager.Instance.Vibrate();
+        changeBackgroundSprite.Change();
         fireworkGo.SetActive(false);
         fireworkGo.SetActive(true);
         tickGo.SetActive(true);
