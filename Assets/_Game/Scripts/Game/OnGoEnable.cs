@@ -9,6 +9,7 @@ public class OnGoEnable : MonoBehaviour
 
     void OnEnable()
     {
+        if (DataManager.Instance.GameData.SelectedLevelIndex > 0) return;
         onEnable?.Invoke();
     }
 }

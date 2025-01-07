@@ -27,10 +27,14 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
 
     [SerializeField] bool isShowMediationDebugger;
     [SerializeField] bool isAdaptiveBanner;
+    [SerializeField] RectTransform safeAreaRt;
     [SerializeField] Canvas canvas;
     [SerializeField] GameObject blocker;
     [SerializeField] GameObject adNotLoadedYet;
     [SerializeField] Color bannerColor;
+
+    public bool IsInterIngame = false;
+    public int InterIngameCapping = 15;
 
     bool isShowingInterstitial;
     bool isShowingRewardedAd;
@@ -87,10 +91,7 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
     IEnumerator ShowBannerRoutine()
     {
         yield return new WaitUntil(() => CanShowBanner());
-        if (LoadSceneManager.Instance.CurrentScene != SceneId.Home)
-        {
-            ShowBanner();
-        }
+        ShowBanner();
     }
 
     bool CanShowBanner() => DataManager.Instance.IsLoaded && LoadSceneManager.Instance.CurrentScene != SceneId.Load;
@@ -219,35 +220,47 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
         Debug.Log("Show interstitial ad");
 
         AppsflyerEventRegister.af_interstitial_ad_eligible();
-        blocker.SetActive(true);
-
-        OnInterstitialAdDisplayed = () =>
-        {
-            FirebaseManager.Instance.ad_inter_show();
-            onFinished?.Invoke();
-        };
-
-        OnInterstitialAdFailedToDisplay = (errorInfo) =>
-        {
-            FirebaseManager.Instance.ad_inter_fail(errorInfo.Message);
-            onFinished?.Invoke();
-        };
-
-        OnInterstitialAdClicked = () =>
-        {
-            FirebaseManager.Instance.ad_inter_click();
-        };
 
         if (MaxSdk.IsInterstitialReady(InterstitialAdUnitId))
         {
+            blocker.SetActive(true);
+
+            OnInterstitialAdDisplayed = () =>
+            {
+                FirebaseManager.Instance.ad_inter_show();
+                onFinished?.Invoke();
+            };
+
+            OnInterstitialAdFailedToDisplay = (errorInfo) =>
+            {
+                FirebaseManager.Instance.ad_inter_fail(errorInfo.Message);
+                onFinished?.Invoke();
+            };
+
+            OnInterstitialAdClicked = () =>
+            {
+                FirebaseManager.Instance.ad_inter_click();
+            };
+
             isShowingInterstitial = true;
             interstitialTimeCounter = ConfigManager.Instance.InterstitialCapping;
             MaxSdk.ShowInterstitial(InterstitialAdUnitId);
+        }
+        else if (AdMobManager.Instance.CanShowInterstitial())
+        {
+            isShowingInterstitial = true;
+            interstitialTimeCounter = ConfigManager.Instance.InterstitialCapping;
+            AdMobManager.Instance.ShowInterstitialAd(() =>
+            {
+                isShowingInterstitial = false;
+                blocker.SetActive(false);
+            });
         }
         else
         {
             Debug.Log("Interstitial ad not ready");
             MaxSdk.LoadInterstitial(InterstitialAdUnitId);
+            AdMobManager.Instance.LoadInterstitialAd();
             blocker.SetActive(false);
             onFinished?.Invoke();
         }
@@ -409,6 +422,7 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
     public void ShowBanner()
     {
         if (!GameManager.Instance.IsEnableAds) return;
+        Debug.Log("show banner");
         MaxSdk.ShowBanner(BannerAdUnitId);
     }
 
@@ -439,7 +453,9 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
     public void InitializeMRecAds()
     {
         // MRECs are sized to 300x250 on phones and tablets
-        MaxSdk.CreateMRec(MrecAdUnitId, MaxSdkBase.AdViewPosition.BottomCenter);
+        Debug.Log("initialize mrec");
+        Vector2 pos = GetMRecPos();
+        MaxSdk.CreateMRec(MrecAdUnitId, pos.x, pos.y);
 
         MaxSdkCallbacks.MRec.OnAdLoadedEvent += OnMRecAdLoadedEvent;
         MaxSdkCallbacks.MRec.OnAdLoadFailedEvent += OnMRecAdLoadFailedEvent;
@@ -469,7 +485,7 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
         if (!GameManager.Instance.IsEnableAds) return;
         MaxSdk.UpdateMRecPosition(MrecAdUnitId, x, y);
         MaxSdk.ShowMRec(MrecAdUnitId);
-        HideBanner();
+        //HideBanner();
     }
 
     public void ShowMRec(RectTransform rt, AnchorsType anchorsType = AnchorsType.Center)
@@ -492,7 +508,28 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
         pos -= 0.5f * new Vector2(300, 250);
         MaxSdk.UpdateMRecPosition(MrecAdUnitId, pos.x, pos.y);
         MaxSdk.ShowMRec(MrecAdUnitId);
-        HideBanner();
+        //HideBanner();
+    }
+
+    public void ShowMRecAboveBanner()
+    {
+        if (!GameManager.Instance.IsEnableAds) return;
+        Vector2 pos = GetMRecPos();
+        MaxSdk.UpdateMRecPosition(MrecAdUnitId, pos.x, pos.y);
+        MaxSdk.ShowMRec(MrecAdUnitId);
+    }
+
+    Vector2 GetMRecPos()
+    {
+        Vector2 canvasSize = GameManager.Instance.CanvasSizeDelta;
+        float y = (safeAreaRt.anchorMin.y + 1 - safeAreaRt.anchorMax.y) * canvasSize.y;
+        Vector2 pos = new Vector2(0, -0.5f * canvasSize.y + y);
+        pos = new Vector2(pos.x + canvasSize.x * 0.5f, canvasSize.y * 0.5f - pos.y);
+        pos *= canvas.scaleFactor;
+        pos /= MaxSdkUtils.GetScreenDensity();
+        pos -= 0.5f * new Vector2(300, 250);
+        pos.y -= MaxSdkUtils.GetAdaptiveBannerHeight() + 10 + 125;
+        return pos;
     }
 
     public void ShowMRec(MaxSdkBase.AdViewPosition position)
@@ -500,14 +537,14 @@ public class MaxManager : SingletonMonoBehaviour<MaxManager>
         if (!GameManager.Instance.IsEnableAds) return;
         MaxSdk.UpdateMRecPosition(MrecAdUnitId, position);
         MaxSdk.ShowMRec(MrecAdUnitId);
-        HideBanner();
+        //HideBanner();
     }
 
     public void HideMRec()
     {
         if (!GameManager.Instance.IsEnableAds) return;
         MaxSdk.HideMRec(MrecAdUnitId);
-        ShowBanner();
+        //ShowBanner();
     }
     #endregion
 }

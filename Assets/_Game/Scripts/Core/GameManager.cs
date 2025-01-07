@@ -34,6 +34,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         startupTime = DateTime.Now;
         timeScale = Time.timeScale;
         previousTimeScale = timeScale;
+
+        Debug.Log(Screen.safeArea);
     }
 
     private void Update()

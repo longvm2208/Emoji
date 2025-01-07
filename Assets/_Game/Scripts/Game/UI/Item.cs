@@ -32,9 +32,21 @@ public class Item : MonoBehaviour
     #region UI EVENTS
     public void OnClick()
     {
-        button.interactable = false;
-        onClick?.Invoke();
-        itemBar.OnItemSelected();
+        if (MaxManager.Instance.IsInterIngame)
+        {
+            MaxManager.Instance.ShowInterstitial("ingame_item", () =>
+            {
+                button.interactable = false;
+                onClick?.Invoke();
+                itemBar.OnItemSelected();
+            });
+        }
+        else
+        {
+            button.interactable = false;
+            onClick?.Invoke();
+            itemBar.OnItemSelected();
+        }
     }
     #endregion
 }

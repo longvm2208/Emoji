@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonHint : SingletonMonoBehaviour<ButtonHint>
+public class ButtonHint : MonoBehaviour
 {
+    public static ButtonHint Instance;
+
     [SerializeField] GameObject adGo;
     [SerializeField] ItemBar itemBar;
     [SerializeField] BigItem[] items;
@@ -12,6 +14,7 @@ public class ButtonHint : SingletonMonoBehaviour<ButtonHint>
 
     private void Start()
     {
+        Instance = this;
         gameObject.SetActive(GameData.Instance.SelectedLevelIndex > 0);
         adGo.SetActive(GameData.Instance.HintsCount == 0);
     }
@@ -53,6 +56,7 @@ public class ButtonHint : SingletonMonoBehaviour<ButtonHint>
 
     public void OnHintCompleted()
     {
+        if (DataManager.Instance.GameData.SelectedLevelIndex == 0) return;
         StartCoroutine(OnHintCompletedCoroutine());
     }
 

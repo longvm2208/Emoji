@@ -1,0 +1,669 @@
+{
+"skeleton": {
+	"hash": "HZlShS8FdEA",
+	"spine": "4.0.64",
+	"x": -439.17,
+	"y": -656,
+	"width": 852,
+	"height": 1032,
+	"images": "./images/",
+	"audio": "./images/"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Eyes", "parent": "root", "color": "38ff1eff" },
+	{ "name": "Mouth", "parent": "root", "color": "ff6314ff" },
+	{ "name": "EyesL", "parent": "Eyes", "x": -33.67, "y": -75.6, "color": "38ff1eff" },
+	{ "name": "EyeMove", "parent": "Eyes", "x": 0.9, "y": -47.62, "color": "38ff1eff" },
+	{
+		"name": "EyeInsside",
+		"parent": "EyeMove",
+		"length": 23.3,
+		"rotation": 177.95,
+		"x": -175.65,
+		"y": -30.07,
+		"color": "38ff1eff"
+	},
+	{ "name": "EyesL2", "parent": "Eyes", "x": 30.62, "y": -75.18, "color": "38ff1eff" },
+	{
+		"name": "EyeInsside2",
+		"parent": "EyeMove",
+		"length": 23.3,
+		"rotation": 177.95,
+		"x": 168.04,
+		"y": -30.07,
+		"color": "38ff1eff"
+	},
+	{ "name": "Chartacter03", "parent": "root", "x": 18.83 },
+	{ "name": "stick 2", "parent": "Chartacter03", "length": 129.43, "rotation": 98.37, "x": -54.87, "y": 164.22 },
+	{ "name": "sttick 1", "parent": "Chartacter03", "length": 136.58, "rotation": 143.08, "x": -313.9, "y": 204.13 },
+	{ "name": "Stick 4", "parent": "root", "rotation": 38.46, "x": 349.93, "y": 143.22 },
+	{ "name": "Stick 3", "parent": "Chartacter03", "length": 137.02, "rotation": -168.97, "x": -6, "y": -546.62 },
+	{ "name": "StickMask1", "parent": "Chartacter03", "x": -18.83, "color": "ca0909ff" },
+	{ "name": "StickMask2", "parent": "Chartacter03", "x": -18.83, "color": "ca0909ff" },
+	{ "name": "StickMask3", "parent": "Chartacter03", "x": -18.83, "color": "ca0909ff" },
+	{ "name": "Items", "parent": "root" },
+	{ "name": "Items02", "parent": "Items", "length": 207.75, "rotation": 135.96, "x": 794.11, "y": 9.26 },
+	{ "name": "Stick 6", "parent": "Stick 4", "length": 101.13, "rotation": 2.04, "x": -142.28, "y": 0.47 },
+	{ "name": "Items01", "parent": "Items", "length": 235.82, "rotation": 149.41, "x": 834.78, "y": 51.8 }
+],
+"slots": [
+	{ "name": "earR", "bone": "Chartacter03", "attachment": "Lv03/Step00/earR" },
+	{ "name": "earL", "bone": "Chartacter03", "attachment": "Lv03/Step00/earL" },
+	{ "name": "body", "bone": "Chartacter03", "attachment": "Lv03/Step00/body" },
+	{ "name": "EyeLine2", "bone": "EyesL2" },
+	{ "name": "Haft2", "bone": "EyesL2" },
+	{ "name": "EyeClose2", "bone": "EyesL2" },
+	{ "name": "scar1", "bone": "Chartacter03" },
+	{ "name": "Scar2", "bone": "Chartacter03" },
+	{ "name": "Vet Thuong 1", "bone": "Chartacter03" },
+	{ "name": "Scar4", "bone": "Chartacter03" },
+	{ "name": "Items01", "bone": "Items01" },
+	{ "name": "StickMask1", "bone": "StickMask1", "attachment": "StickMask1" },
+	{ "name": "sttick 1", "bone": "sttick 1" },
+	{ "name": "StickMask2", "bone": "StickMask2", "attachment": "StickMask2" },
+	{ "name": "stick 2", "bone": "stick 2" },
+	{ "name": "Vet Thuong 2", "bone": "Chartacter03" },
+	{ "name": "StickMask3", "bone": "StickMask3", "attachment": "StickMask3" },
+	{ "name": "Stick 3", "bone": "Stick 3" },
+	{ "name": "Vet Thuong 4", "bone": "Chartacter03" },
+	{ "name": "EyeLine3", "bone": "Chartacter03" },
+	{ "name": "Vet Thuong 2f", "bone": "Chartacter03" },
+	{ "name": "eyeR", "bone": "Stick 4" },
+	{ "name": "Stick 4", "bone": "Stick 6" },
+	{ "name": "Vet Thuong 2fr", "bone": "Stick 4" },
+	{ "name": "Mouth", "bone": "Mouth" },
+	{ "name": "EyeLine", "bone": "EyesL" },
+	{ "name": "EyeInsside", "bone": "EyeInsside" },
+	{ "name": "EyeInsside2", "bone": "EyeInsside2" },
+	{ "name": "Haft", "bone": "EyesL" },
+	{ "name": "EyeClose", "bone": "EyesL" },
+	{ "name": "Items02", "bone": "Items02" },
+	{ "name": "Items01_Front", "bone": "Items01" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"body": {
+				"Lv03/Step00/body": { "x": -24.5, "y": -140, "width": 817, "height": 1032 }
+			},
+			"earL": {
+				"Lv03/Step00/earL": { "x": -319, "y": 197.5, "width": 278, "height": 295 }
+			},
+			"earR": {
+				"Lv03/Step00/earR": { "x": 255, "y": 197.5, "width": 278, "height": 295 }
+			},
+			"EyeClose": {
+				"Lv03/Step00/EyeClose": { "x": -138.83, "y": 3.6, "width": 293, "height": 280 },
+				"Lv03/Step00/Haft": { "x": -139.33, "y": 75.1, "width": 294, "height": 137 }
+			},
+			"EyeClose2": {
+				"Lv03/Step00/EyeClose": { "x": 140.56, "y": 3.18, "width": 293, "height": 280 },
+				"Lv03/Step00/Haft": { "x": 140.06, "y": 74.68, "width": 294, "height": 137 }
+			},
+			"EyeInsside": {
+				"Lv03/Step00/EyeInsside": { "x": -1.78, "y": -1.25, "rotation": -177.95, "width": 182, "height": 171 }
+			},
+			"EyeInsside2": {
+				"Lv03/Step00/EyeInsside": { "x": -1.78, "y": -1.25, "rotation": -177.95, "width": 182, "height": 171 }
+			},
+			"EyeLine": {
+				"Lv03/Step00/EyeLine": { "x": -138.83, "y": 3.6, "width": 293, "height": 280 }
+			},
+			"EyeLine2": {
+				"Lv03/Step00/EyeLine": { "x": 140.56, "y": 3.18, "width": 293, "height": 280 }
+			},
+			"EyeLine3": {
+				"Lv03/Step00/EyeLine2": { "x": 150.5, "y": -72, "width": 293, "height": 280 }
+			},
+			"eyeR": {
+				"Lv03/Step00/eyeR": { "x": -206.05, "y": 22.91, "rotation": -38.46, "width": 293, "height": 280 }
+			},
+			"Items01": {
+				"Lv03/BigItems/01": { "x": 244.9, "y": 1, "rotation": -149.41, "width": 469, "height": 329 }
+			},
+			"Items01_Front": {
+				"Lv03/BigItems/01": {
+					"type": "mesh",
+					"uvs": [ 0.22181, 0.24118, 0.18844, 0.44678, 0, 0.36853, 0, 0.16446 ],
+					"triangles": [ 2, 3, 0, 1, 2, 0 ],
+					"vertices": [ 400.54, -5.91, 379.59, 60.29, 468.77, 83.1, 502.94, 25.3 ],
+					"hull": 4,
+					"edges": [ 6, 0, 0, 2, 4, 6, 2, 4 ],
+					"width": 469,
+					"height": 329
+				}
+			},
+			"Items02": {
+				"Lv03/BigItems/02": { "x": 238.28, "y": -0.92, "rotation": -135.96, "width": 387, "height": 382 }
+			},
+			"Mouth": {
+				"Lv03/Step00/MouthClose": { "x": 1, "y": -348.5, "width": 254, "height": 83 },
+				"Lv03/Step00/MouthClose2": { "path": "Lv03/Step00/MouthClose", "x": 1, "y": -348.5, "rotation": 180, "width": 254, "height": 83 },
+				"Lv03/Step00/MouthOpen": { "x": 0.5, "y": -352, "width": 139, "height": 180 },
+				"Lv03/Step00/MouthSing": { "x": -2.5, "y": -376.5, "width": 179, "height": 121 }
+			},
+			"scar1": {
+				"Lv03/Step03/scar1": { "x": -316, "y": 201, "width": 44, "height": 40 }
+			},
+			"Scar2": {
+				"Lv03/Step03/Scar2": { "x": -55, "y": 154, "width": 30, "height": 46 }
+			},
+			"Scar4": {
+				"Lv03/Step03/Scar4": { "y": -558, "width": 32, "height": 44 }
+			},
+			"stick 2": {
+				"Lv03/Step00/stick 2": { "x": -19.85, "y": 0.53, "rotation": -98.37, "width": 133, "height": 779 }
+			},
+			"Stick 3": {
+				"Lv03/Step00/Stick 3": { "x": 13.21, "y": -0.15, "rotation": 168.97, "width": 668, "height": 160 }
+			},
+			"Stick 4": {
+				"Lv03/Step00/Stick 4": { "x": -230.69, "y": 6.88, "rotation": -40.5, "width": 827, "height": 663 }
+			},
+			"StickMask1": {
+				"StickMask1": {
+					"type": "clipping",
+					"end": "sttick 1",
+					"vertexCount": 4,
+					"vertices": [ -246.39, 272.95, -354.75, 122.2, -1538.5, 1022.88, -1423.61, 1156.19 ],
+					"color": "ce3a3aff"
+				}
+			},
+			"StickMask2": {
+				"StickMask2": {
+					"type": "clipping",
+					"end": "stick 2",
+					"vertexCount": 4,
+					"vertices": [ 54.32, 180.17, -138.83, 153.91, -373.77, 1323.37, -25.27, 1335.68 ],
+					"color": "ce3a3aff"
+				}
+			},
+			"StickMask3": {
+				"StickMask3": {
+					"type": "clipping",
+					"end": "Stick 3",
+					"vertexCount": 4,
+					"vertices": [ -1.37, -448.08, 29.65, -640.53, -1133.64, -904.26, -1154.56, -556.18 ],
+					"color": "ce3a3aff"
+				}
+			},
+			"sttick 1": {
+				"Lv03/Step00/sttick 1": { "x": -371.1, "y": 4.66, "rotation": -143.08, "width": 938, "height": 729 }
+			},
+			"Vet Thuong 1": {
+				"Lv03/Step00/Vet Thuong 1": { "x": -315, "y": 200.5, "width": 58, "height": 59 }
+			},
+			"Vet Thuong 2": {
+				"Lv03/Step00/Vet Thuong 2": { "x": -55, "y": 148.5, "width": 44, "height": 69 }
+			},
+			"Vet Thuong 2f": {
+				"Lv03/Step00/Vet Thuong 2f": { "x": 172, "y": -205, "width": 154, "height": 100 }
+			},
+			"Vet Thuong 2fr": {
+				"Lv03/Step00/Vet Thuong 2fr": { "x": -204.32, "y": 20.26, "rotation": -38.46, "width": 225, "height": 226 }
+			},
+			"Vet Thuong 4": {
+				"Lv03/Step00/Vet Thuong 4": { "x": -1.5, "y": -558.5, "width": 41, "height": 59 }
+			}
+		}
+	}
+],
+"events": {
+	"Sound/hammer": { "audio": "Sound/hammer.MP3" },
+	"Sound/sound_lv3new": { "audio": "Sound/sound_lv3new.MP3" }
+},
+"animations": {
+	"Eyes/Eyes1St3,4": {
+		"slots": {
+			"EyeClose": {
+				"attachment": [
+					{ "time": 0.0667, "name": "Lv03/Step00/Haft" },
+					{ "time": 0.1333, "name": "Lv03/Step00/EyeClose" },
+					{ "time": 0.2667, "name": "Lv03/Step00/Haft" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"EyeClose2": {
+				"attachment": [
+					{ "time": 0.0667, "name": "Lv03/Step00/Haft" },
+					{ "time": 0.1333, "name": "Lv03/Step00/EyeClose" },
+					{ "time": 0.2667, "name": "Lv03/Step00/Haft" },
+					{ "time": 0.3333, "name": null },
+					{ "time": 1.6667, "name": null }
+				]
+			},
+			"EyeInsside": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeInsside" }
+				]
+			},
+			"EyeInsside2": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeInsside" }
+				]
+			},
+			"EyeLine": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeLine" }
+				]
+			},
+			"EyeLine2": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeLine" }
+				]
+			}
+		}
+	},
+	"Eyes/EyesSt1": {
+		"slots": {
+			"EyeInsside": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeInsside" }
+				]
+			},
+			"EyeLine": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeLine" }
+				]
+			}
+		},
+		"bones": {
+			"EyeMove": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": 19.62, "y": 41.49, "curve": "stepped" },
+					{ "time": 0.6667, "x": 19.62, "y": 41.49 },
+					{ "time": 1, "x": -33.08, "y": 32.38, "curve": "stepped" },
+					{ "time": 1.5, "x": -33.08, "y": 32.38 },
+					{ "time": 1.8333, "x": -13.87, "y": -36.24, "curve": "stepped" },
+					{ "time": 2.3333, "x": -13.87, "y": -36.24 },
+					{ "time": 2.6667 }
+				]
+			}
+		}
+	},
+	"Eyes/EyesSt2": {
+		"slots": {
+			"EyeClose": {
+				"attachment": [
+					{ "time": 0.0667, "name": "Lv03/Step00/Haft" },
+					{ "time": 0.1333, "name": "Lv03/Step00/EyeClose" },
+					{ "time": 1.0667, "name": "Lv03/Step00/Haft" },
+					{ "time": 1.1333, "name": null }
+				]
+			},
+			"EyeClose2": {
+				"attachment": [
+					{ "time": 0.0667, "name": "Lv03/Step00/Haft" },
+					{ "time": 0.1333, "name": "Lv03/Step00/EyeClose" },
+					{ "time": 1.0667, "name": "Lv03/Step00/Haft" },
+					{ "time": 1.1333, "name": null }
+				]
+			},
+			"EyeInsside": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeInsside" }
+				]
+			},
+			"EyeInsside2": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeInsside" }
+				]
+			},
+			"EyeLine": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeLine" }
+				]
+			},
+			"EyeLine2": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeLine" }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"offsets": [
+					{ "slot": "EyeClose2", "offset": 22 }
+				]
+			}
+		]
+	},
+	"Mouth/MouthSt1": {
+		"slots": {
+			"Mouth": {
+				"attachment": [
+					{ "name": "Lv03/Step00/MouthClose2" }
+				]
+			}
+		}
+	},
+	"Mouth/MouthSt2": {
+		"slots": {
+			"Mouth": {
+				"attachment": [
+					{ "name": "Lv03/Step00/MouthClose2" },
+					{ "time": 0.5, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 1, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 1.1667, "name": "Lv03/Step00/MouthClose2" },
+					{ "time": 2, "name": "Lv03/Step00/MouthClose2" }
+				]
+			}
+		}
+	},
+	"Mouth/MouthSt3": {
+		"slots": {
+			"Mouth": {
+				"attachment": [
+					{ "name": "Lv03/Step00/MouthClose" },
+					{ "time": 0.1, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 1.5, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 1.5667, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 2.1667, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 2.3333, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 2.4, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 2.4667, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 2.8333, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 2.9, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 2.9667, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 3.8333, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 3.9, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 3.9667, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 4.2333, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 4.3, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 4.6667, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 4.7333, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 4.8, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 5, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 5.0667, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 5.1333, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 5.3333, "name": "Lv03/Step00/MouthSing" },
+					{ "time": 5.4, "name": "Lv03/Step00/MouthClose" },
+					{ "time": 5.4667, "name": "Lv03/Step00/MouthOpen" },
+					{ "time": 6.0667, "name": "Lv03/Step00/MouthOpen" }
+				]
+			}
+		},
+		"events": [
+			{ "name": "Sound/sound_lv3new" }
+		]
+	},
+	"Body/St01": {
+		"slots": {
+			"EyeLine3": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeLine2" }
+				]
+			},
+			"eyeR": {
+				"attachment": [
+					{ "name": "Lv03/Step00/eyeR" }
+				]
+			},
+			"Items01": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2.1, "color": "ffffffff" },
+					{ "time": 2.2333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "Lv03/BigItems/01" }
+				]
+			},
+			"Items01_Front": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2.1, "color": "ffffffff" },
+					{ "time": 2.2333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "Lv03/BigItems/01" }
+				]
+			},
+			"stick 2": {
+				"rgba": [
+					{ "time": 0.3, "color": "ffffffff" },
+					{ "time": 0.5667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "Lv03/Step00/stick 2" }
+				]
+			},
+			"Stick 3": {
+				"rgba": [
+					{ "time": 1.9667, "color": "ffffffff" },
+					{ "time": 2.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "Lv03/Step00/Stick 3" }
+				]
+			},
+			"Stick 4": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Stick 4" }
+				]
+			},
+			"sttick 1": {
+				"rgba": [
+					{ "time": 1.1, "color": "ffffffff" },
+					{ "time": 1.4, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "Lv03/Step00/sttick 1" }
+				]
+			},
+			"Vet Thuong 1": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 1" }
+				]
+			},
+			"Vet Thuong 2": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 2" }
+				]
+			},
+			"Vet Thuong 2f": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 2f" }
+				]
+			},
+			"Vet Thuong 2fr": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 2fr" }
+				]
+			},
+			"Vet Thuong 4": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 4" }
+				]
+			}
+		},
+		"bones": {
+			"stick 2": {
+				"rotate": [
+					{ "time": 0.1667 },
+					{ "time": 0.3, "value": 2.19 },
+					{ "time": 0.5667, "value": 4.55 }
+				],
+				"translate": [
+					{ "time": 0.1667 },
+					{ "time": 0.3, "x": -109.72, "y": 550.02 },
+					{ "time": 0.5667, "x": -147.43, "y": 617.46 }
+				]
+			},
+			"sttick 1": {
+				"translate": [
+					{ "time": 1 },
+					{ "time": 1.1, "x": -822.42, "y": 617.86 },
+					{ "time": 1.4, "x": -893.46, "y": 671.23 }
+				]
+			},
+			"Stick 3": {
+				"translate": [
+					{ "time": 1.8333 },
+					{ "time": 1.9667, "x": -378.73, "y": -73.8 },
+					{ "time": 2.3333, "x": -436.5, "y": -85.06 }
+				]
+			},
+			"Items01": {
+				"rotate": [
+					{ "value": 5.24, "curve": "stepped" },
+					{ "time": 0.1667, "value": 5.24 },
+					{ "time": 0.3, "value": -19.72 },
+					{ "time": 0.5, "value": -25.58 },
+					{ "time": 0.6667, "value": 38.22 },
+					{ "time": 1, "value": 56.22 },
+					{ "time": 1.1, "value": 13.12 },
+					{ "time": 1.3333, "value": 9.07 },
+					{ "time": 1.6667, "value": 113.62 },
+					{ "time": 1.8333, "value": 115.2 },
+					{ "time": 1.9333, "value": 98.57 },
+					{ "time": 2.2333, "value": 94.85 }
+				],
+				"translate": [
+					{ "x": -494.8, "y": 235.4 },
+					{ "time": 0.1667, "x": -503.09, "y": 235.4 },
+					{ "time": 0.3, "x": -660.64, "y": 363.01 },
+					{ "time": 0.5, "x": -647.93, "y": 390.55 },
+					{ "time": 0.6667, "x": -736.62, "y": 354.27 },
+					{ "time": 1, "x": -820.59, "y": 403.23 },
+					{ "time": 1.1, "x": -919.89, "y": 417.2 },
+					{ "time": 1.3333, "x": -905.92, "y": 432.71 },
+					{ "time": 1.6667, "x": -898.74, "y": -160.2 },
+					{ "time": 1.8333, "x": -898.74, "y": -174.23 },
+					{ "time": 1.9333, "x": -981.55, "y": -151.77 },
+					{ "time": 2.2333, "x": -1005.41, "y": -119.49 }
+				]
+			}
+		}
+	},
+	"Body/St02": {
+		"slots": {
+			"EyeLine3": {
+				"attachment": [
+					{ "name": "Lv03/Step00/EyeLine2" },
+					{ "time": 2.4333, "name": null }
+				]
+			},
+			"eyeR": {
+				"attachment": [
+					{ "name": "Lv03/Step00/eyeR" },
+					{ "time": 2.4333, "name": null }
+				]
+			},
+			"Items02": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "Lv03/BigItems/02" }
+				]
+			},
+			"Stick 4": {
+				"rgba": [
+					{ "time": 2.4333, "color": "ffffffff" },
+					{ "time": 2.7, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "Lv03/Step00/Stick 4" }
+				]
+			},
+			"Vet Thuong 1": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 1" }
+				]
+			},
+			"Vet Thuong 2": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 2" }
+				]
+			},
+			"Vet Thuong 2f": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 2f" }
+				]
+			},
+			"Vet Thuong 2fr": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 2fr" },
+					{ "time": 2.4333, "name": null }
+				]
+			},
+			"Vet Thuong 4": {
+				"attachment": [
+					{ "name": "Lv03/Step00/Vet Thuong 4" }
+				]
+			}
+		},
+		"bones": {
+			"Items02": {
+				"rotate": [
+					{ "time": 0.2667 },
+					{ "time": 0.4, "value": -29.51 },
+					{ "time": 0.5, "value": -33.76 },
+					{ "time": 0.6, "curve": "stepped" },
+					{ "time": 0.7333 },
+					{ "time": 0.8667, "value": -29.51 },
+					{ "time": 0.9667, "value": -33.76 },
+					{ "time": 1.0667, "curve": "stepped" },
+					{ "time": 1.1667 },
+					{ "time": 1.3, "value": -29.51 },
+					{ "time": 1.4, "value": -33.76 },
+					{ "time": 1.5, "curve": "stepped" },
+					{ "time": 1.6 },
+					{ "time": 1.7333, "value": -29.51 },
+					{ "time": 1.8333, "value": -33.76 },
+					{ "time": 1.9333, "curve": "stepped" },
+					{ "time": 2.0333 },
+					{ "time": 2.1667, "value": -47.5 },
+					{ "time": 2.2667, "value": -50.83 },
+					{ "time": 2.3667, "value": 5.35 },
+					{ "time": 2.5 }
+				],
+				"translate": [
+					{ "x": 141.69, "y": -137.01 },
+					{ "time": 0.1, "x": 48.85, "y": -47.24 },
+					{ "time": 0.2667 }
+				]
+			},
+			"Stick 4": {
+				"translate": [
+					{ "time": 0.6 },
+					{ "time": 0.6667, "x": -15.58, "y": -12.37 },
+					{ "time": 0.7333, "curve": "stepped" },
+					{ "time": 1.0667 },
+					{ "time": 1.1333, "x": -15.58, "y": -12.37 },
+					{ "time": 1.2, "curve": "stepped" },
+					{ "time": 1.5 },
+					{ "time": 1.5667, "x": -15.58, "y": -12.37 },
+					{ "time": 1.6333, "curve": "stepped" },
+					{ "time": 1.9333 },
+					{ "time": 2, "x": -15.58, "y": -12.37 },
+					{ "time": 2.0667, "curve": "stepped" },
+					{ "time": 2.3667 },
+					{ "time": 2.4333, "x": -7.15, "y": -101.94 }
+				]
+			},
+			"Stick 6": {
+				"rotate": [
+					{ "time": 2.4333 },
+					{ "time": 2.7, "value": 5.49 }
+				],
+				"translate": [
+					{ "time": 2.3667 },
+					{ "time": 2.4333, "x": -515.46, "y": 2.92 },
+					{ "time": 2.7, "x": -669.75, "y": -32.72 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.5, "name": "Sound/hammer" }
+		]
+	}
+}
+}

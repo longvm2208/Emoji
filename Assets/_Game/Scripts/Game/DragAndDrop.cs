@@ -17,7 +17,6 @@ public class DragAndDrop : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("down");
         isDragging = true;
         // Calculate the offset between the object's position and the mouse position
         offset = transform.position - GetMouseWorldPosition();
@@ -26,7 +25,6 @@ public class DragAndDrop : MonoBehaviour
 
     void OnMouseUp()
     {
-        Debug.Log("up");
         isDragging = false;
         onEndDrag?.Invoke();
     }

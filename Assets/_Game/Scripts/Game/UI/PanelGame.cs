@@ -14,6 +14,8 @@ public class PanelGame : PanelBase
             GameData.Instance.showPopupRate = false;
             UIManager.Instance.OpenPopup(PopupId.Rate);
         }
+
+        AudioManager.Instance.ChangeMusicVolume(0.5f);
     }
 
     public void OnClickHome()

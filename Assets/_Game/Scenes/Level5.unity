@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436365329}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6eac9d7071cedb47929161345cce0b6, type: 3}
   m_Name: 
@@ -1128,6 +1128,18 @@ MonoBehaviour:
   onEnable:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1560512481}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1560512481}
         m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
         m_MethodName: Move
@@ -3600,7 +3612,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471034873}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6eac9d7071cedb47929161345cce0b6, type: 3}
   m_Name: 
@@ -3608,6 +3620,18 @@ MonoBehaviour:
   onEnable:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1315589123}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1315589123}
         m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
         m_MethodName: Move
@@ -5330,7 +5354,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864564083}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6eac9d7071cedb47929161345cce0b6, type: 3}
   m_Name: 
@@ -5338,6 +5362,18 @@ MonoBehaviour:
   onEnable:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 454510063}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 454510063}
         m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
         m_MethodName: Move
@@ -5970,7 +6006,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878418585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6eac9d7071cedb47929161345cce0b6, type: 3}
   m_Name: 
@@ -5978,6 +6014,18 @@ MonoBehaviour:
   onEnable:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2098822484}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2098822484}
         m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
         m_MethodName: Move
@@ -6953,6 +7001,10 @@ PrefabInstance:
     - target: {fileID: 1375429910250500171, guid: 48a39925fa0010b46b321284439a648f, type: 3}
       propertyPath: m_Name
       value: PopupSpecialStep
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375429910250500171, guid: 48a39925fa0010b46b321284439a648f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1893081541724988466, guid: 48a39925fa0010b46b321284439a648f, type: 3}
       propertyPath: onClickSpecial.m_PersistentCalls.m_Calls.Array.size

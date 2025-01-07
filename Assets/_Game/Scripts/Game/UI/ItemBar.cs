@@ -29,6 +29,8 @@ public class ItemBar : MonoBehaviour
             if (i == 0) status = 1;
             items[i].Reload(status);
         }
+
+        handRt.gameObject.SetActive(DataManager.Instance.GameData.SelectedLevelIndex == 0);
     }
 
     public void OnItemSelected()
@@ -54,7 +56,7 @@ public class ItemBar : MonoBehaviour
             }
         }
         VibrationManager.Instance.Vibrate();
-        changeBackgroundSprite.Change();
+        changeBackgroundSprite?.Change();
         fireworkGo.SetActive(false);
         fireworkGo.SetActive(true);
         tickGo.SetActive(true);

@@ -2059,7 +2059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4158022320639804649, guid: 48a39925fa0010b46b321284439a648f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7544231129933279963, guid: 48a39925fa0010b46b321284439a648f, type: 3}
       propertyPath: _length
@@ -2677,6 +2677,7 @@ GameObject:
   - component: {fileID: 606010891}
   - component: {fileID: 606010890}
   - component: {fileID: 606010892}
+  - component: {fileID: 606010893}
   m_Layer: 0
   m_Name: 04
   m_TagString: Untagged
@@ -2967,7 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889eafe2fd768c54c9362e4e890885fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigItem: {fileID: 0}
+  bigItem: {fileID: 606010893}
   colliders:
   - {fileID: 363847346}
   - {fileID: 127072836}
@@ -3134,6 +3135,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundId: 5
   duration: -1
+--- !u!114 &606010893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606010884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459ce209282da184bafb629bad1dec72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHint:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1682109777}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 620532035}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Disable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1165818115}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 742167825}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &620532033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3774,6 +3838,7 @@ GameObject:
   - component: {fileID: 868887728}
   - component: {fileID: 868887729}
   - component: {fileID: 868887730}
+  - component: {fileID: 868887731}
   m_Layer: 0
   m_Name: 02
   m_TagString: Untagged
@@ -3961,7 +4026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889eafe2fd768c54c9362e4e890885fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigItem: {fileID: 0}
+  bigItem: {fileID: 868887731}
   colliders:
   - {fileID: 1855572096}
   onTriggerEnters:
@@ -4104,6 +4169,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundId: 2
   duration: -1
+--- !u!114 &868887731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868887723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459ce209282da184bafb629bad1dec72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHint:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1564229236}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1421326409}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &906881199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4701,6 +4805,7 @@ GameObject:
   - component: {fileID: 1269801666}
   - component: {fileID: 1269801665}
   - component: {fileID: 1269801671}
+  - component: {fileID: 1269801672}
   m_Layer: 0
   m_Name: 03
   m_TagString: Untagged
@@ -4720,7 +4825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889eafe2fd768c54c9362e4e890885fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigItem: {fileID: 0}
+  bigItem: {fileID: 1269801672}
   colliders:
   - {fileID: 1511283247}
   onTriggerEnters:
@@ -5019,6 +5124,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundId: 3
   duration: -1
+--- !u!114 &1269801672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269801664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459ce209282da184bafb629bad1dec72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHint:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1076298936}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 587893127}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &1283152056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5180,8 +5324,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adGo: {fileID: 2073723062}
-  itemBar: {fileID: 0}
-  items: []
+  itemBar: {fileID: 1557080641}
+  items:
+  - {fileID: 1654808995}
+  - {fileID: 868887731}
+  - {fileID: 1693788501}
+  - {fileID: 1269801672}
+  - {fileID: 606010893}
 --- !u!1 &1316644137
 GameObject:
   m_ObjectHideFlags: 0
@@ -5964,7 +6113,7 @@ MonoBehaviour:
   tickGo: {fileID: 1177704369}
   myRt: {fileID: 1557080637}
   handRt: {fileID: 2007360454}
-  buttonHint: {fileID: 0}
+  buttonHint: {fileID: 1283152059}
   changeBackgroundSprite: {fileID: 1316644141}
   items:
   - {fileID: 1255430185}
@@ -6039,6 +6188,7 @@ GameObject:
   - component: {fileID: 1654808992}
   - component: {fileID: 1654808993}
   - component: {fileID: 1654808994}
+  - component: {fileID: 1654808995}
   m_Layer: 0
   m_Name: 01
   m_TagString: Untagged
@@ -6215,7 +6365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889eafe2fd768c54c9362e4e890885fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigItem: {fileID: 0}
+  bigItem: {fileID: 1654808995}
   colliders:
   - {fileID: 376421096}
   onTriggerEnters:
@@ -6401,6 +6551,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundId: 1
   duration: 1.25
+--- !u!114 &1654808995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654808986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459ce209282da184bafb629bad1dec72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHint:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 566056767}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1336928445}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1678727835
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,6 +6907,7 @@ GameObject:
   - component: {fileID: 1693788494}
   - component: {fileID: 1693788499}
   - component: {fileID: 1693788500}
+  - component: {fileID: 1693788501}
   m_Layer: 0
   m_Name: 02 (1)
   m_TagString: Untagged
@@ -6737,7 +6927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889eafe2fd768c54c9362e4e890885fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigItem: {fileID: 0}
+  bigItem: {fileID: 1693788501}
   colliders:
   - {fileID: 88801244}
   onTriggerEnters:
@@ -7048,6 +7238,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundId: 2
   duration: -1
+--- !u!114 &1693788501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693788493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459ce209282da184bafb629bad1dec72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHint:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 644677003}
+        m_TargetAssemblyTypeName: MovingHand2D, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1214407362}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &1766749092
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -114,11 +114,18 @@ public class FirebaseManager : SingletonMonoBehaviour<FirebaseManager>
         return FirebaseRemoteConfig.DefaultInstance.GetValue(key).BooleanValue;
     }
 
+    string GetString(string key)
+    {
+        return FirebaseRemoteConfig.DefaultInstance.GetValue(key).StringValue;
+    }
+
     private void ApplyRemoteConfigData()
     {
         Debug.Log("Apply remote config data");
         ConfigManager.Instance.InterstitialCapping = GetInt("interstitial_capping");
         ConfigManager.Instance.LoadingInterstitial = GetBool("loading_interstitial");
+        ConfigManager.Instance.Levels = JsonUtility.FromJson<SwapLevel>(GetString("swap_level"));
+        MaxManager.Instance.IsInterIngame = GetBool("is_inter_ingame");
     }
     #endregion
 

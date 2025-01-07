@@ -51,7 +51,8 @@ public class LoadSceneManager : SingletonMonoBehaviour<LoadSceneManager>
 
     public void LoadSceneLevel(int index)
     {
-        SceneId id = Enum.Parse<SceneId>("Level" + (index + 1));
+        int level = ConfigManager.Instance.Levels[index];
+        SceneId id = Enum.Parse<SceneId>("Level" + level);
         LoadScene(id);
     }
 

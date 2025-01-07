@@ -41,7 +41,8 @@ public class PopupWin : PopupBase
         //    maskRt.DOAnchorPosY(38, 0.75f);
         //    maskRt.DOSizeDelta(new Vector2(590, 570), 0.75f);
         //});
-        MaxManager.Instance.ShowMRec(MaxSdkBase.AdViewPosition.BottomCenter);
+        //MaxManager.Instance.ShowMRec(MaxSdkBase.AdViewPosition.BottomCenter);
+        MaxManager.Instance.ShowMRecAboveBanner();
     }
 
     public void OnClickRestart()

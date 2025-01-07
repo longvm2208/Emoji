@@ -9,7 +9,8 @@ public class PopupSettings : PopupBase
     public override void Open(object args = null)
     {
         base.Open(args);
-        MaxManager.Instance.ShowMRec(mrecPoint);
+        //MaxManager.Instance.ShowMRec(mrecPoint);
+        MaxManager.Instance.ShowMRecAboveBanner();
     }
 
     #region UI EVENTS

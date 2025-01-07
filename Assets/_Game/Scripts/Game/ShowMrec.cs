@@ -5,7 +5,8 @@ public class ShowMrec : MonoBehaviour
     public void Show()
     {
         Debug.Log("show mrec");
-        MaxManager.Instance.ShowMRec(MaxSdkBase.AdViewPosition.BottomCenter);
+        //MaxManager.Instance.ShowMRec(MaxSdkBase.AdViewPosition.BottomCenter);
+        MaxManager.Instance.ShowMRecAboveBanner();
         AudioManager.Instance.PauseMusic();
     }
 

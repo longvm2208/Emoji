@@ -1,0 +1,90 @@
+Lv03.png
+size:1908,1995
+filter:Linear,Linear
+pma:true
+Lv03/BigItems/01
+bounds:829,635,468,326
+offsets:0,2,469,329
+Lv03/BigItems/02
+bounds:829,253,385,380
+offsets:1,1,387,382
+Lv03/Step00/EyeClose
+bounds:1509,2,291,278
+offsets:2,0,293,280
+rotate:90
+Lv03/Step00/EyeInsside
+bounds:1738,490,178,168
+offsets:3,1,182,171
+rotate:90
+Lv03/Step00/EyeLine
+bounds:1459,670,291,278
+offsets:1,1,293,280
+rotate:90
+Lv03/Step00/EyeLine2
+bounds:1458,295,291,278
+offsets:1,1,293,280
+rotate:90
+Lv03/Step00/Haft
+bounds:1548,1859,291,134
+offsets:3,0,294,137
+Lv03/Step00/MouthClose
+bounds:819,1913,252,80
+offsets:1,1,254,83
+Lv03/Step00/MouthOpen
+bounds:1738,310,137,178
+offsets:1,1,139,180
+Lv03/Step00/MouthSing
+bounds:1739,784,177,117
+offsets:1,1,179,121
+rotate:90
+Lv03/Step00/Stick 3
+bounds:1298,295,666,158
+offsets:1,1,668,160
+rotate:90
+Lv03/Step00/Stick 4
+bounds:2,300,825,661
+offsets:1,1,827,663
+Lv03/Step00/Vet Thuong 1
+bounds:1073,1936,56,57
+offsets:1,1,58,59
+Lv03/Step00/Vet Thuong 2
+bounds:1131,1926,42,67
+offsets:1,1,44,69
+Lv03/Step00/Vet Thuong 2f
+bounds:1739,684,152,98
+offsets:1,1,154,100
+Lv03/Step00/Vet Thuong 2fr
+bounds:1548,1553,223,224
+offsets:1,1,225,226
+Lv03/Step00/Vet Thuong 4
+bounds:1175,1936,39,57
+offsets:1,1,41,59
+Lv03/Step00/body
+bounds:2,963,815,1030
+offsets:1,1,817,1032
+Lv03/Step00/earL
+bounds:1548,1258,276,293
+offsets:1,1,278,295
+Lv03/Step00/earR
+bounds:1548,963,276,293
+offsets:1,1,278,295
+Lv03/Step00/eyeR
+bounds:1216,15,291,278
+offsets:1,1,293,280
+Lv03/Step00/stick 2
+bounds:2,167,131,777
+offsets:1,1,133,779
+rotate:90
+Lv03/Step00/sttick 1
+bounds:819,963,936,727
+offsets:1,1,938,729
+rotate:90
+Lv03/Step03/Scar2
+bounds:1248,1909,27,44
+offsets:1,1,30,46
+Lv03/Step03/Scar4
+bounds:1216,1911,30,42
+offsets:1,1,32,44
+Lv03/Step03/scar1
+bounds:1216,1955,41,38
+offsets:1,1,44,40

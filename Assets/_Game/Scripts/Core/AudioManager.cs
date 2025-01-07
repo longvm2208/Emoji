@@ -42,6 +42,11 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         musicSource.enabled = true;
     }
 
+    public void ChangeMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
     public void PlaySound(SoundId id)
     {
         if (!soundById.ContainsKey(id) || soundById[id] == null) return;
